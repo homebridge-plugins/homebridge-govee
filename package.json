@@ -55,7 +55,7 @@
     "rebuild": "rm -rf package-lock.json && rm -rf node_modules && npm install"
   },
   "dependencies": {
-    "@homebridge/plugin-ui-utils": "^1.0.3",
+    "@homebridge/plugin-ui-utils": "^2.0.0",
     "aws-iot-device-sdk": "^2.2.15",
     "axios": "^1.7.7",
     "node-persist": "^4.0.3",
