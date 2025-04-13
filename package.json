@@ -64,7 +64,7 @@
     "pem": "^1.14.8"
   },
   "optionalDependencies": {
-    "@stoprocent/bluetooth-hci-socket": "^1.5.2",
+    "@stoprocent/bluetooth-hci-socket": "^2.1.0",
     "@stoprocent/noble": "^1.19.1",
     "govee-bt-client": "^1.0.15"
   },
