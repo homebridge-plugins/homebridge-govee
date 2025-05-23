@@ -65,7 +65,7 @@
   },
   "optionalDependencies": {
     "@stoprocent/bluetooth-hci-socket": "^1.5.2",
-    "@stoprocent/noble": "^1.19.1"
+    "@stoprocent/noble": "^2.3.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.2"
