@@ -2,7 +2,7 @@
   "name": "@homebridge-plugins/homebridge-govee",
   "alias": "Govee",
   "type": "module",
-  "version": "11.0.3-beta.3",
+  "version": "11.0.3-beta.4",
   "description": "Homebridge plugin to integrate Govee devices into HomeKit.",
   "author": {
     "name": "bwp91",
