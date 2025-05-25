@@ -1114,6 +1114,14 @@
               "condition": {
                 "functionBody": "return (model.thermoDevices && model.thermoDevices[arrayIndices] && model.thermoDevices[arrayIndices].deviceId && [23,26].includes(model.thermoDevices[arrayIndices].deviceId.length) && !model.thermoDevices[arrayIndices].ignoreDevice);"
               }
+            },
+            "showExtraSwitch": {
+              "type": "boolean",
+              "title": "Show Extra Switch",
+              "description": "If true, a dummy switch will be added so that the temperature appears as a full icon in the Home app, not in the Climate section.",
+              "condition": {
+                "functionBody": "return (model.thermoDevices && model.thermoDevices[arrayIndices] && model.thermoDevices[arrayIndices].deviceId && [23,26].includes(model.thermoDevices[arrayIndices].deviceId.length) && !model.thermoDevices[arrayIndices].ignoreDevice);"
+              }
             }
           }
         }
@@ -1576,7 +1584,8 @@
             "thermoDevices[].label",
             "thermoDevices[].deviceId",
             "thermoDevices[].ignoreDevice",
-            "thermoDevices[].lowBattThreshold"
+            "thermoDevices[].lowBattThreshold",
+            "thermoDevices[].showExtraSwitch"
           ]
         }
       ]
