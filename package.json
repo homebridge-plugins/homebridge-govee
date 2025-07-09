@@ -55,19 +55,18 @@
     "rebuild": "rm -rf package-lock.json && rm -rf node_modules && npm install"
   },
   "dependencies": {
-    "@homebridge/plugin-ui-utils": "^2.0.2",
+    "@homebridge/plugin-ui-utils": "^2.1.0",
     "aws-iot-device-sdk": "^2.2.15",
-    "axios": "^1.9.0",
+    "axios": "^1.10.0",
     "node-persist": "^4.0.4",
     "node-rsa": "^1.1.1",
     "p-queue": "^8.1.0",
     "pem": "^1.14.8"
   },
   "optionalDependencies": {
-    "@stoprocent/bluetooth-hci-socket": "^1.5.2",
-    "@stoprocent/noble": "^1.19.1"
+    "@stoprocent/noble": "^2.3.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.13.2"
+    "@antfu/eslint-config": "^4.16.2"
   }
 }
