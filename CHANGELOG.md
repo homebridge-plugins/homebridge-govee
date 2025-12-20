@@ -2,6 +2,13 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.13.0 (2025-12-15)
+
+### Changes
+
+- new light model: `H6871`
+- dependency updates
+
 ## v11.12.1 (2025-12-05)
 
 ### Changes

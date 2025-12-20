@@ -2,7 +2,7 @@
   "name": "@homebridge-plugins/homebridge-govee",
   "alias": "Govee",
   "type": "module",
-  "version": "11.12.1",
+  "version": "11.13.0",
   "description": "Homebridge plugin to integrate Govee devices into HomeKit.",
   "author": {
     "name": "bwp91",
@@ -66,10 +66,10 @@
   },
   "optionalDependencies": {
     "@stoprocent/bluetooth-hci-socket": "^2.2.3",
-    "@stoprocent/noble": "^2.3.9"
+    "@stoprocent/noble": "^2.3.10"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^6.4.2",
+    "@antfu/eslint-config": "^6.7.1",
     "patch-package": "^8.0.1"
   }
 }
