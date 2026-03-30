@@ -14,6 +14,11 @@
         "type": "string",
         "default": "Govee"
       },
+      "apiKey": {
+        "type": "string",
+        "title": "Govee OpenAPI Key",
+        "description": "Optional. Used for Govee OpenAPI discovery/state/control when available. This is separate from the app login used for AWS/BLE connections."
+      },
       "username": {
         "type": "string",
         "title": "Govee Email",
@@ -29,7 +34,7 @@
         "title": "Ignore Matter Devices",
         "description": "If enabled, the plugin will not set up Matter-enabled models.",
         "condition": {
-          "functionBody": "return (model.username && model.password);"
+          "functionBody": "return ((model.username && model.password) || model.apiKey);"
         }
       },
       "httpRefreshTime": {
@@ -1436,6 +1441,7 @@
       "type": "fieldset",
       "title": "Required Settings",
       "items": [
+        "apiKey",
         "username",
         "password"
       ]
