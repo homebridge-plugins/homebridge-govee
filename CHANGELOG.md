@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.24.0 (Pending Release)
+
+### Changes
+
+- feat: add support for Lantern Floor Lamp H1630 (@alexjsp)
+
 ## v11.23.0 (2026-05-16)
 
 ### Changes
