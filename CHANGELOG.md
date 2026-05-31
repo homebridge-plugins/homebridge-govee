@@ -7,6 +7,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Changes
 
 - feat: add integrated light and confirmed fan controls for ceiling fan H1310 (#1285)
+- fix: correct inverted OpenAPI ice size mapping for ice makers (H7172/H717D/H8120)
 
 ## v11.24.0 (2026-05-31)
 
