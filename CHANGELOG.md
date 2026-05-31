@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: correct inverted OpenAPI ice size mapping for ice makers (H7172/H717D/H8120)
 - fix: send correct OpenAPI gear values (1/2/3) for heaters H7130/H713A/H713B/H713C
 - fix: add required autoStop field to OpenAPI heater target temperature
+- fix: send correct OpenAPI work modes (sleep/auto/gears) for purifiers H7122/H7123/H7124
 
 ## v11.24.0 (2026-05-31)
 
