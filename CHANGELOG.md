@@ -8,6 +8,8 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 - feat: add integrated light and confirmed fan controls for ceiling fan H1310 (#1285)
 - fix: correct inverted OpenAPI ice size mapping for ice makers (H7172/H717D/H8120)
+- fix: send correct OpenAPI gear values (1/2/3) for heaters H7130/H713A/H713B/H713C
+- fix: add required autoStop field to OpenAPI heater target temperature
 
 ## v11.24.0 (2026-05-31)
 
