@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.25.0 (Pending Release)
+
+### Changes
+
+- feat: add integrated light and confirmed fan controls for ceiling fan H1310 (#1285)
+
 ## v11.24.0 (2026-05-31)
 
 ### Changes
