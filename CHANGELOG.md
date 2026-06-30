@@ -7,6 +7,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Changes
 
 - feat: add support for Ceiling Light Ultra H1270
+- feat: expose independent main/background light zones for two-zone lights (e.g. H1270) as separate switches (requires OpenAPI/API key)
 
 ## v11.24.0 (2026-05-31)
 
