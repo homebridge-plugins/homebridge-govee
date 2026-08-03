@@ -7,6 +7,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Changed
 
 - fix: stop shipping the test files to npm, since they are only needed in the repository
+- feat: add ble encryption for the H3001 solar string lights, which silently ignore unencrypted frames (#1328)
 
 ## v11.32.1 (2026-08-02)
 
