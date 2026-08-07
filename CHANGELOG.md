@@ -8,6 +8,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 - feat: control the H1250 zones with the device's own frame, as govee ignores its toggles (#1343) (@Principe1218)
 - fix: explain in the log when zone tiles are missing because aws credentials are not set
+- fix: restore debug logging when the plugin runs in a child bridge
 
 ## v11.34.1 (2026-08-06)
 

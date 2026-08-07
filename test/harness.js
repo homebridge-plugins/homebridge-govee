@@ -196,7 +196,6 @@ export function makePlatform(overrides = {}) {
     log,
     config: { disableDeviceLogging: false },
     deviceConf: {},
-    isBeta: false,
     accessories,
     api: {
       hap: {
