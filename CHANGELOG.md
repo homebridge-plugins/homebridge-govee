@@ -17,6 +17,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat: give the H1250's zones independent color and brightness (#1346) (@Principe1218)
 - fix: stop a lan scan that cannot reach the network from crashing the bridge
 - fix: apply the openapi disable and refresh settings instead of asking for them to be removed
+- fix: say once when a bluetooth reading arrives for an unknown device, not on every broadcast
 
 ## v11.34.1 (2026-08-06)
 
