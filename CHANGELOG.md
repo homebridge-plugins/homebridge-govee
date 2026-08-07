@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: explain in the log when zone tiles are missing because aws credentials are not set
 - fix: restore debug logging when the plugin runs in a child bridge
 - fix: turn adaptive lighting off when a colour is chosen outside HomeKit
+- fix: send a colour change when only the saturation moves, on every night light
 
 ## v11.34.1 (2026-08-06)
 
