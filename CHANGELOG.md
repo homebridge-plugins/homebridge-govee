@@ -12,7 +12,10 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: turn adaptive lighting off when a colour is chosen outside HomeKit
 - fix: send a colour change when only the saturation moves, on every night light
 - fix: listen for saturation on the main light too, not only hue
-- fix: accept 20-byte H5106 status frames (@danieloleary)
+- fix: accept 20-byte H5106 status frames (#1345) (@danieloleary)
+- fix: stop rescaling the H1250's brightness, since it already counts to 100 over AWS (#1347) (@Principe1218)
+- feat: give the H1250's zones independent color and brightness (#1346) (@Principe1218)
+- fix: stop a lan scan that cannot reach the network from crashing the bridge
 
 ## v11.34.1 (2026-08-06)
 
