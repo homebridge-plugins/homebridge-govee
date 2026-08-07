@@ -16,6 +16,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: stop rescaling the H1250's brightness, since it already counts to 100 over AWS (#1347) (@Principe1218)
 - feat: give the H1250's zones independent color and brightness (#1346) (@Principe1218)
 - fix: stop a lan scan that cannot reach the network from crashing the bridge
+- fix: apply the openapi disable and refresh settings instead of asking for them to be removed
 
 ## v11.34.1 (2026-08-06)
 
