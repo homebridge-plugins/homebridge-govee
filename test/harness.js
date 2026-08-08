@@ -71,6 +71,12 @@ function defaultValueFor(name) {
 class FakeService {
   constructor(type, name, subtype) {
     this.type = type
+    // Real HAP has no `.type` field - accessory lookups actually match on the
+    // service's UUID/constructor. `.type` above is kept only because so much
+    // of this suite already asserts against it as a readable stand-in for
+    // that; `hapType` is the separate field lookups match against, so a test
+    // can delete `.type` to see what code looks like against a real Service
+    this.hapType = type
     this.displayName = name
     this.subtype = subtype
     this.characteristics = new Map()
@@ -137,8 +143,18 @@ class FakeAccessory {
    * from a previous setting. Matching only the type would silently skip that.
    */
   getService(nameOrType) {
-    return this.services.find(service => service.type === nameOrType)
+    return this.services.find(service => service.hapType === nameOrType)
       || this.services.find(service => service.displayName === nameOrType)
+  }
+
+  /**
+   * Real HAP looks a service up this way by its type and subtype together,
+   * which is what distinguishes two services of the same type (e.g. two
+   * Lightbulbs) on one accessory. `getService` alone cannot do that - it only
+   * matches by type OR by display name.
+   */
+  getServiceById(type, subtype) {
+    return this.services.find(service => service.hapType === type && service.subtype === subtype)
   }
 
   addService(type, name, subtype) {
