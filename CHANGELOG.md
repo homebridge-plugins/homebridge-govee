@@ -19,8 +19,8 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: apply the openapi disable and refresh settings instead of asking for them to be removed
 - fix: say once when a bluetooth reading arrives for an unknown device, not on every broadcast
 - fix: reject a refresh time so large it would make the plugin poll every millisecond
-- fix(H5054): don't let a slow leak warning block other sensors (#1348)
-- fix: mark sensor batteries low at the configured threshold
+- fix(H5054): don't let a slow leak warning block other sensors (#1348) (@danieloleary)
+- fix: mark sensor batteries low at the configured threshold (#1349) (@danieloleary)
 - feat: show whether the kettle is heating, keeping warm or idle (#1337)
 - fix: give the H5106 a battery service, so its low battery setting does something
 
