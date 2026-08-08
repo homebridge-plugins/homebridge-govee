@@ -22,6 +22,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(H5054): don't let a slow leak warning block other sensors (#1348)
 - fix: mark sensor batteries low at the configured threshold
 - feat: show whether the kettle is heating, keeping warm or idle (#1337)
+- fix: give the H5106 a battery service, so its low battery setting does something
 
 ## v11.34.1 (2026-08-06)
 

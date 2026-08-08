@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 
 import SensorLeak from '../lib/device/sensor-leak.js'
+import SensorMonitor from '../lib/device/sensor-monitor.js'
 import SensorThermoSwitch from '../lib/device/sensor-thermo-switch.js'
 import SensorThermo from '../lib/device/sensor-thermo.js'
 import { makeAccessory, makePlatform } from './harness.js'
@@ -9,6 +10,9 @@ const handlers = [
   ['leak sensor', SensorLeak],
   ['thermo sensor', SensorThermo],
   ['thermo switch sensor', SensorThermoSwitch],
+  // The H5106 monitor took a lowBattThreshold from the config and then had no
+  // battery service to apply it to, so the setting did nothing at all
+  ['monitor sensor', SensorMonitor],
 ]
 
 function buildDevice(DeviceClass, {
