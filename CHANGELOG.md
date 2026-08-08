@@ -12,6 +12,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: turn adaptive lighting off when a colour is chosen outside HomeKit
 - fix: send a colour change when only the saturation moves, on every night light
 - fix: listen for saturation on the main light too, not only hue
+- fix: accept 20-byte H5106 status frames (@danieloleary)
 
 ## v11.34.1 (2026-08-06)
 
