@@ -10,13 +10,43 @@
  */
 
 /**
+ * HAP hangs a characteristic's allowed values off the characteristic itself, so
+ * plugin code uses the same expression as both a name and a namespace:
+ *
+ *   updateCharacteristic(hapChar.ContactSensorState, hapChar.ContactSensorState.CONTACT_DETECTED)
+ *
+ * Without these a test could only ever assert `undefined === undefined`, which
+ * is a test that cannot fail. Add an entry when a device starts using one.
+ */
+const CHARACTERISTIC_VALUES = {
+  ContactSensorState: { CONTACT_DETECTED: 0, CONTACT_NOT_DETECTED: 1 },
+}
+
+/**
  * Returns an object where any property read gives back its own name, so
  * `Service.Fan` is the string 'Fan'. Homebridge hands out classes here; we only
  * ever need something unique and readable to use as a key.
+ *
+ * A name that has allowed values above comes back as an object that still reads
+ * as its own name, with the values hanging off it. The objects are cached so the
+ * same one comes back every time, and services key on `String(name)` so a plain
+ * string from a test finds the same characteristic.
  */
 function nameProxy() {
+  const cache = new Map()
   return new Proxy({}, {
-    get: (_target, prop) => (typeof prop === 'string' ? prop : undefined),
+    get: (_target, prop) => {
+      if (typeof prop !== 'string') {
+        return undefined
+      }
+      if (!CHARACTERISTIC_VALUES[prop]) {
+        return prop
+      }
+      if (!cache.has(prop)) {
+        cache.set(prop, { ...CHARACTERISTIC_VALUES[prop], toString: () => prop })
+      }
+      return cache.get(prop)
+    },
     has: () => true,
   })
 }
@@ -85,15 +115,19 @@ class FakeService {
   }
 
   getCharacteristic(name) {
+    // Keyed on the plain name, so a characteristic carrying allowed values
+    // (a String object - see nameProxy) and a plain string from a test both
+    // reach the same one
+    const key = String(name)
     // Real HAP adds an optional characteristic on first read, so this does too
-    if (!this.characteristics.has(name)) {
-      this.characteristics.set(name, new FakeCharacteristic(name))
+    if (!this.characteristics.has(key)) {
+      this.characteristics.set(key, new FakeCharacteristic(key))
     }
-    return this.characteristics.get(name)
+    return this.characteristics.get(key)
   }
 
   testCharacteristic(name) {
-    return this.characteristics.has(name)
+    return this.characteristics.has(String(name))
   }
 
   addCharacteristic(name) {
@@ -101,7 +135,7 @@ class FakeService {
   }
 
   removeCharacteristic(characteristic) {
-    this.characteristics.delete(characteristic?.name ?? characteristic)
+    this.characteristics.delete(String(characteristic?.name ?? characteristic))
   }
 
   updateCharacteristic(name, value) {
