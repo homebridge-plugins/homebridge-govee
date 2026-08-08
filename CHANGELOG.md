@@ -6,6 +6,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 ### Changed
 
+- fix: read 20-byte H5106 status frames instead of leaving temperature and humidity stale (#1322)
 - feat: control the H1250 zones with the device's own frame, as govee ignores its toggles (#1343) (@Principe1218)
 - fix: explain in the log when zone tiles are missing because aws credentials are not set
 - fix: restore debug logging when the plugin runs in a child bridge
