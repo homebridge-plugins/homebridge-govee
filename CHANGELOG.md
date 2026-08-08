@@ -18,6 +18,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: stop a lan scan that cannot reach the network from crashing the bridge
 - fix: apply the openapi disable and refresh settings instead of asking for them to be removed
 - fix: say once when a bluetooth reading arrives for an unknown device, not on every broadcast
+- fix: reject a refresh time so large it would make the plugin poll every millisecond
 
 ## v11.34.1 (2026-08-06)
 

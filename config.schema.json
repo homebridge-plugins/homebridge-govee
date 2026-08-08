@@ -49,7 +49,8 @@
         "type": "integer",
         "description": "An interval (in seconds) in which your HTTP devices will refresh with the plugin. Must be 30 or more.",
         "placeholder": 30,
-        "minimum": 30
+        "minimum": 30,
+        "maximum": 2073600
       },
       "awsDisable": {
         "title": "Disable AWS",
@@ -69,7 +70,8 @@
         "minimum": 60,
         "condition": {
           "functionBody": "return (!model.bleDisable);"
-        }
+        },
+        "maximum": 2073600
       },
       "lanDisable": {
         "title": "Disable LAN",
@@ -84,7 +86,8 @@
         "minimum": 10,
         "condition": {
           "functionBody": "return (!model.lanDisable);"
-        }
+        },
+        "maximum": 2073600
       },
       "lanScanInterval": {
         "title": "LAN Scan Interval",
@@ -94,7 +97,8 @@
         "minimum": 30,
         "condition": {
           "functionBody": "return (!model.lanDisable);"
-        }
+        },
+        "maximum": 2073600
       },
       "lanScanSubnets": {
         "title": "LAN Scan Subnets",
@@ -118,7 +122,8 @@
         "minimum": 30,
         "condition": {
           "functionBody": "return (!model.openApiDisable);"
-        }
+        },
+        "maximum": 2073600
       },
       "bleControlInterval": {
         "title": "BLE Control Interval",
