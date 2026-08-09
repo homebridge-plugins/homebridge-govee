@@ -23,6 +23,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: mark sensor batteries low at the configured threshold (#1349) (@danieloleary)
 - feat: show whether the kettle is heating, keeping warm or idle (#1337)
 - fix: give the H5106 a battery service, so its low battery setting does something
+- fix: stop a light's broadcast being mistaken for an h5101 sensor reading
 
 ## v11.34.1 (2026-08-06)
 
