@@ -25,6 +25,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: give the H5106 a battery service, so its low battery setting does something
 - fix: stop a light's broadcast being mistaken for an h5101 sensor reading
 - fix: follow a device renamed in the govee app, instead of keeping its first name forever (#1344)
+- fix: say why the bluetooth adapter would not start, rather than only that it timed out (#1344)
 
 ## v11.34.1 (2026-08-06)
 
