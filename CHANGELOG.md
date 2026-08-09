@@ -24,6 +24,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat: show whether the kettle is heating, keeping warm or idle (#1337)
 - fix: give the H5106 a battery service, so its low battery setting does something
 - fix: stop a light's broadcast being mistaken for an h5101 sensor reading
+- fix: follow a device renamed in the govee app, instead of keeping its first name forever (#1344)
 
 ## v11.34.1 (2026-08-06)
 
