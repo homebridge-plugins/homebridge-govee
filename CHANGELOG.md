@@ -7,6 +7,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Changed
 
 - fix: stop reading an h7173 startup frame as a kettle preset temperature (#1351)
+- fix: call the kettle's first temperature slot the target, not preset 1 (#1337)
 
 ## v11.35.0 (2026-08-09)
 
