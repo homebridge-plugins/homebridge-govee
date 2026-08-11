@@ -11,6 +11,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat: show how long the kettle will keep the water warm for (#1337)
 - fix: keep saving eve history for a device with a slash in its name
 - fix: write eve history atomically, so an interrupted write cannot corrupt it
+- fix: recover from an unreadable eve history instead of retrying forever
 
 ## v11.35.0 (2026-08-09)
 
