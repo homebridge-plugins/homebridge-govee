@@ -9,6 +9,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: stop reading an h7173 startup frame as a kettle preset temperature (#1351)
 - fix: call the kettle's first temperature slot the target, not preset 1 (#1337)
 - feat: show how long the kettle will keep the water warm for (#1337)
+- fix: keep saving eve history for a device with a slash in its name
 
 ## v11.35.0 (2026-08-09)
 
