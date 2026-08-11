@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: call the kettle's first temperature slot the target, not preset 1 (#1337)
 - feat: show how long the kettle will keep the water warm for (#1337)
 - fix: keep saving eve history for a device with a slash in its name
+- fix: write eve history atomically, so an interrupted write cannot corrupt it
 
 ## v11.35.0 (2026-08-09)
 
