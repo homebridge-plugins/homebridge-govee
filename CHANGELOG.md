@@ -9,6 +9,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: give the H1310 and R1310 ceiling fans their own handler, with the light they were missing (#1352)
 - fix: scale the H1310 and R1310 fan speed to the six steps they have, not the H1370's twelve (#1352)
 - fix: stop a fan ignoring the first speed asked of it after a restart
+- chore: log what each govee capability accepts, not only that it exists, in debug mode
 
 ## v11.36.0 (2026-08-11)
 
