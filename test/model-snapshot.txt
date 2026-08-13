@@ -113,14 +113,22 @@ H12D0 (rgb)
     Saturation
 
 H1310 (fan)
-  handler: GoveeFanH1370
+  handler: GoveeFanH1310
   service: Fanv2
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]
-  service: Lightbulb
-    Brightness
-    ColorTemperature  [maxValue=370, minValue=154]
+  service: Lightbulb (Background Light)
+    Brightness  [minStep=1]
+    ColorTemperature
+    Hue
     On
+    Saturation
+  service: Lightbulb (Main Light)
+    Brightness  [minStep=1]
+    ColorTemperature
+    Hue
+    On
+    Saturation
 
 H1370 (fan)
   handler: GoveeFanH1370
@@ -5269,14 +5277,22 @@ R1250 (rgb)
     Saturation
 
 R1310 (fan)
-  handler: GoveeFanH1370
+  handler: GoveeFanH1310
   service: Fanv2
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]
-  service: Lightbulb
-    Brightness
-    ColorTemperature  [maxValue=370, minValue=154]
+  service: Lightbulb (Background Light)
+    Brightness  [minStep=1]
+    ColorTemperature
+    Hue
     On
+    Saturation
+  service: Lightbulb (Main Light)
+    Brightness  [minStep=1]
+    ColorTemperature
+    Hue
+    On
+    Saturation
 
 R1401 (rgb)
   handler: deviceLight

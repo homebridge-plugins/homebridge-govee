@@ -13,6 +13,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: take a ceiling fan's speed count from the fan itself, rather than from its model (#1352)
 - fix: send the H1310 and R1310 brightness on the scale they accept, so the light stops landing at a third (#1352)
 - fix: stop reporting success for a command sent on a connection the device does not have enabled
+- feat: give the H1310 and R1310 a separate tile for each of their two lights (#1352) (@ekalp)
 
 ## v11.36.0 (2026-08-11)
 
