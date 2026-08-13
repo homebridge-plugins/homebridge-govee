@@ -26,6 +26,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: read a ceiling fan's light from what it says about its lights, not from whether the fan has power (#1352)
 - fix: stop calling a ceiling fan's light status unrecognised on a handler that reads it (#1352)
 - fix: stop reporting govee's command receipts as messages the plugin did not understand (#1352)
+- fix: read whether a ceiling fan is turning from the fan itself, not from its lights (#1352)
 
 ## v11.36.0 (2026-08-11)
 
