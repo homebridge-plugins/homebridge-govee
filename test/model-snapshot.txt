@@ -114,7 +114,7 @@ H12D0 (rgb)
 
 H1310 (fan)
   handler: GoveeFanH1310
-  service: Fanv2
+  service: Fanv2 *primary
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]
   service: Lightbulb
@@ -124,7 +124,7 @@ H1310 (fan)
 
 H1370 (fan)
   handler: GoveeFanH1370
-  service: Fanv2
+  service: Fanv2 *primary
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]
   service: Lightbulb
@@ -5270,7 +5270,7 @@ R1250 (rgb)
 
 R1310 (fan)
   handler: GoveeFanH1310
-  service: Fanv2
+  service: Fanv2 *primary
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]
   service: Lightbulb
