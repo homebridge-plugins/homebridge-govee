@@ -24,6 +24,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: show each of a ceiling fan's two lights as on or off from what the fan reports (#1352)
 - fix: lead a ceiling fan's tile with the fan rather than one of its lights (#1352)
 - fix: read a ceiling fan's light from what it says about its lights, not from whether the fan has power (#1352)
+- fix: stop calling a ceiling fan's light status unrecognised on a handler that reads it (#1352)
 
 ## v11.36.0 (2026-08-11)
 
