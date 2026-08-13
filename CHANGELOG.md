@@ -28,6 +28,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: stop reporting govee's command receipts as messages the plugin did not understand (#1352)
 - fix: read whether a ceiling fan is turning from the fan itself, not from its lights (#1352)
 - fix: switch a ceiling fan on with its own switch, not with a command that turns its lights on (#1352)
+- fix: put a ceiling fan's shared brightness and colour on one light tile, as the fan has only one of each (#1352)
 
 ## v11.36.0 (2026-08-11)
 
