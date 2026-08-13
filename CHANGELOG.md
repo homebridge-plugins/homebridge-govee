@@ -12,6 +12,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - chore: log what each govee capability accepts, not only that it exists, in debug mode
 - fix: take a ceiling fan's speed count from the fan itself, rather than from its model (#1352)
 - fix: send the H1310 and R1310 brightness on the scale they accept, so the light stops landing at a third (#1352)
+- fix: stop reporting success for a command sent on a connection the device does not have enabled
 
 ## v11.36.0 (2026-08-11)
 
