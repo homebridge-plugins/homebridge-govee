@@ -16,6 +16,8 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat: give the H1310 and R1310 a separate tile for each of their two lights (#1352) (@ekalp)
 - fix: keep a speed scale for a ceiling fan model that is not in the table
 - fix: only give the H1310 and R1310 two light tiles when each has a switch of its own to send (#1352)
+- fix: lead a thermo sensor's tile with its temperature, not its humidity, when shown as a thermostat (#1354)
+- docs(schema): describe what the thermo sensor extra switch setting actually does now (#1354)
 
 ## v11.36.0 (2026-08-11)
 
