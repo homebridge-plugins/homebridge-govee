@@ -15,6 +15,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: stop reporting success for a command sent on a connection the device does not have enabled
 - feat: give the H1310 and R1310 a separate tile for each of their two lights (#1352) (@ekalp)
 - fix: keep a speed scale for a ceiling fan model that is not in the table
+- fix: only give the H1310 and R1310 two light tiles when each has a switch of its own to send (#1352)
 
 ## v11.36.0 (2026-08-11)
 
