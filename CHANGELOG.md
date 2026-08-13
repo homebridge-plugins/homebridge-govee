@@ -20,6 +20,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - docs(schema): describe what the thermo sensor extra switch setting actually does now (#1354)
 - feat: let a ceiling fan that can reverse be switched between forward and reverse from the fan tile (#1352)
 - fix: stop calling a ceiling fan's speed report unrecognised while the fan is off (#1352)
+- fix: read a ceiling fan's airflow direction from what the fan reports, so the tile follows the govee app (#1352)
 
 ## v11.36.0 (2026-08-11)
 
