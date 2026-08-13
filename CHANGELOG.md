@@ -18,6 +18,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: only give the H1310 and R1310 two light tiles when each has a switch of its own to send (#1352)
 - fix: lead a thermo sensor's tile with its temperature, not its humidity, when shown as a thermostat (#1354)
 - docs(schema): describe what the thermo sensor extra switch setting actually does now (#1354)
+- feat: let a ceiling fan that can reverse be switched between forward and reverse from the fan tile (#1352)
 
 ## v11.36.0 (2026-08-11)
 
