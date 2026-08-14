@@ -30,6 +30,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: switch a ceiling fan on with its own switch, not with a command that turns its lights on (#1352)
 - fix: put a ceiling fan's shared brightness and colour on one light tile, as the fan has only one of each (#1352)
 - fix: switch a ceiling fan's light off instead of dimming both its lights to nothing (#1352)
+- chore(deps): dependency updates
 
 ## v11.36.0 (2026-08-11)
 
