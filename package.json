@@ -73,12 +73,12 @@
   },
   "optionalDependencies": {
     "@stoprocent/bluetooth-hci-socket": "^2.3.0",
-    "@stoprocent/noble": "^2.7.1"
+    "@stoprocent/noble": "^2.8.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.3.0",
-    "@vitest/coverage-v8": "^4.1.10",
-    "vitest": "^4.1.10"
+    "@vitest/coverage-v8": "^4.1.11",
+    "vitest": "^4.1.11"
   },
   "allowScripts": {
     "@serialport/bindings-cpp": true,

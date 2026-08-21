@@ -7,6 +7,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Changed
 
 - fix: recognise a govee feature hub group as a group, instead of reporting it as an unsupported device
+- chore(deps): dependency updates
 
 ## v11.37.0 (2026-08-14)
 
