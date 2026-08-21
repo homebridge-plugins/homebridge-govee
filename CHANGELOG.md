@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.37.1 (Pending Release)
+
+### Changed
+
+- fix: recognise a govee feature hub group as a group, instead of reporting it as an unsupported device
+
 ## v11.37.0 (2026-08-14)
 
 ### Changed
