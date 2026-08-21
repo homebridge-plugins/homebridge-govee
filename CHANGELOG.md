@@ -2,7 +2,7 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
-## v11.37.1 (Pending Release)
+## v11.37.1 (2026-08-21)
 
 ### Changed
 
