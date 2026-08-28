@@ -61,9 +61,9 @@
     "changelog:sync": "node .github/scripts/sync-changelog.mjs"
   },
   "dependencies": {
-    "@homebridge/plugin-ui-utils": "^2.2.5",
+    "@homebridge/plugin-ui-utils": "^2.2.6",
     "aws-iot-device-sdk": "^2.2.16",
-    "axios": "^1.19.0",
+    "axios": "^1.20.0",
     "mqtt": "^5.15.2",
     "node-persist": "^4.0.4",
     "node-rsa": "^2.0.0",

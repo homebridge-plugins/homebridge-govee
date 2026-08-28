@@ -13,6 +13,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat(scenes): a scene selector dropdown with scenes, snapshots and diy scenes (#1360)
 - fix: colour picks raced one behind, and colour echoes desaturated the pick (#1361)
 - fix(h5106): skip command ack frames the monitor was reading as impossible temperatures (#1296)
+- chore(deps): dependency updates
 
 ## v11.37.1 (2026-08-21)
 
