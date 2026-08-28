@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.39.0 (Pending Release)
+
+### Changed
+
+- feat(kettle): show which slot the target temperature comes from
+
 ## v11.37.1 (2026-08-21)
 
 ### Changed
