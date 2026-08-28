@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(h1370): send fan power to the fan not the lights, and add the light tiles and oscillation
 - feat(ice-maker): control the H8120 night light and ice making with its real app commands (#1250)
 - feat(h601f): main and ambient light tiles with per-light power and correct brightness (#1223)
+- feat(scenes): a scene selector dropdown with scenes, snapshots and diy scenes (#1360)
 
 ## v11.37.1 (2026-08-21)
 

@@ -969,6 +969,30 @@
                   }
                 }
               }
+            },
+            "sceneSelector": {
+              "title": "Scene Selector: Scenes",
+              "type": "boolean",
+              "description": "Offer this device's preset scenes in a scene selector dropdown - a separate TV-style accessory added to HomeKit manually using the bridge's setup code. The accessory appears when any Scene Selector option is enabled. Needs a Govee API key.",
+              "condition": {
+                "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
+              }
+            },
+            "sceneSelectorSnapshots": {
+              "title": "Scene Selector: Snapshots",
+              "type": "boolean",
+              "description": "Offer this device's snapshots in the scene selector dropdown - can be enabled on its own, without the preset scenes.",
+              "condition": {
+                "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
+              }
+            },
+            "sceneSelectorDiy": {
+              "title": "Scene Selector: DIY Scenes",
+              "type": "boolean",
+              "description": "Offer this device's diy scenes in the scene selector dropdown - can be enabled on its own, without the preset scenes.",
+              "condition": {
+                "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
+              }
             }
           }
         }
@@ -1495,6 +1519,30 @@
               "condition": {
                 "functionBody": "return (model.iceMakerDevices && model.iceMakerDevices[arrayIndices] && model.iceMakerDevices[arrayIndices].deviceId && model.iceMakerDevices[arrayIndices].deviceId.length === 23);"
               }
+            },
+            "sceneSelector": {
+              "title": "Scene Selector: Scenes",
+              "type": "boolean",
+              "description": "Offer this device's night light scenes in a scene selector dropdown - a separate TV-style accessory added to HomeKit manually using the bridge's setup code. The accessory appears when any Scene Selector option is enabled. Needs a Govee API key.",
+              "condition": {
+                "functionBody": "return (model.iceMakerDevices && model.iceMakerDevices[arrayIndices] && model.iceMakerDevices[arrayIndices].deviceId && model.iceMakerDevices[arrayIndices].deviceId.length === 23 && !model.iceMakerDevices[arrayIndices].ignoreDevice);"
+              }
+            },
+            "sceneSelectorSnapshots": {
+              "title": "Scene Selector: Snapshots",
+              "type": "boolean",
+              "description": "Offer this device's snapshots in the scene selector dropdown - can be enabled on its own, without the night light scenes.",
+              "condition": {
+                "functionBody": "return (model.iceMakerDevices && model.iceMakerDevices[arrayIndices] && model.iceMakerDevices[arrayIndices].deviceId && model.iceMakerDevices[arrayIndices].deviceId.length === 23 && !model.iceMakerDevices[arrayIndices].ignoreDevice);"
+              }
+            },
+            "sceneSelectorDiy": {
+              "title": "Scene Selector: DIY Scenes",
+              "type": "boolean",
+              "description": "Offer this device's diy scenes in the scene selector dropdown - can be enabled on its own, without the night light scenes.",
+              "condition": {
+                "functionBody": "return (model.iceMakerDevices && model.iceMakerDevices[arrayIndices] && model.iceMakerDevices[arrayIndices].deviceId && model.iceMakerDevices[arrayIndices].deviceId.length === 23 && !model.iceMakerDevices[arrayIndices].ignoreDevice);"
+              }
             }
           }
         }
@@ -1555,6 +1603,9 @@
             "lightDevices[].awsBrightnessNoScale",
             "lightDevices[].adaptiveLightingShift",
             "lightDevices[].awsColourMode",
+            "lightDevices[].sceneSelector",
+            "lightDevices[].sceneSelectorSnapshots",
+            "lightDevices[].sceneSelectorDiy",
             {
               "expandable": true,
               "title": "Custom Scenes/Modes",
@@ -1822,7 +1873,10 @@
           "items": [
             "iceMakerDevices[].label",
             "iceMakerDevices[].deviceId",
-            "iceMakerDevices[].ignoreDevice"
+            "iceMakerDevices[].ignoreDevice",
+            "iceMakerDevices[].sceneSelector",
+            "iceMakerDevices[].sceneSelectorSnapshots",
+            "iceMakerDevices[].sceneSelectorDiy"
           ]
         }
       ]
