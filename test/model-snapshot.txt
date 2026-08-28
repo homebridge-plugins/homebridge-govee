@@ -113,7 +113,7 @@ H12D0 (rgb)
     Saturation
 
 H1310 (fan)
-  handler: GoveeFanH1310
+  handler: GoveeFanCeiling
   service: Fanv2 *primary
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]
@@ -123,7 +123,7 @@ H1310 (fan)
     On
 
 H1370 (fan)
-  handler: GoveeFanH1370
+  handler: GoveeFanCeiling
   service: Fanv2 *primary
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]
@@ -5269,7 +5269,7 @@ R1250 (rgb)
     Saturation
 
 R1310 (fan)
-  handler: GoveeFanH1310
+  handler: GoveeFanCeiling
   service: Fanv2 *primary
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]

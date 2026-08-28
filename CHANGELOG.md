@@ -7,6 +7,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Changed
 
 - feat(kettle): show which slot the target temperature comes from
+- fix(h1370): send fan power to the fan not the lights, and add the light tiles and oscillation
 
 ## v11.37.1 (2026-08-21)
 
