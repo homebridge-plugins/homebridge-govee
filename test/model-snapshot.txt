@@ -5185,7 +5185,6 @@ H8120 (iceMaker)
   handler: GoveeIceMaker
   service: Fanv2
     Active
-    RotationSpeed  [maxValue=3, minStep=1, minValue=0, unit="unitless"]
 
 H8121 (iceMaker)
   handler: GoveeIceMaker
