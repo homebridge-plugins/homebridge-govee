@@ -714,8 +714,6 @@ H5106 (sensorMonitor)
   handler: deviceSensorMonitor
   service: AirQualitySensor
     PM2_5Density
-  service: Battery
-    BatteryLevel
   service: HumiditySensor
     CurrentRelativeHumidity
   service: TemperatureSensor *primary
