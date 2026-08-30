@@ -8,6 +8,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 - fix(scenes): cap the selector at 98 scenes, homekit allows no more inputs on one accessory (#1362)
 - fix(h5106): remove the battery tile, the device is usb powered with no battery (#1296)
+- fix(payload): warn about a repeated unknown command once, not on every transaction id (#1363)
 
 ## v11.39.0 (2026-08-28)
 
