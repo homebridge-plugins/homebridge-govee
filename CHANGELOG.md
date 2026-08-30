@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.39.1 (Pending Release)
+
+### Changed
+
+- fix(scenes): cap the selector at 98 scenes, homekit allows no more inputs on one accessory (#1362)
+
 ## v11.39.0 (2026-08-28)
 
 ### Changed
