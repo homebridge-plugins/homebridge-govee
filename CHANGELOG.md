@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(h5106): remove the battery tile, the device is usb powered with no battery (#1296)
 - fix(payload): warn about a repeated unknown command once, not on every transaction id (#1363)
 - fix(payload): log the video mode broadcast at debug, there is nothing a tile could show (#1363)
+- fix(aws): read the identity file in javascript, the system openssl refuses its legacy ciphers
 
 ## v11.39.0 (2026-08-28)
 

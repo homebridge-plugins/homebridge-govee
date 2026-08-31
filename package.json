@@ -65,11 +65,10 @@
     "aws-iot-device-sdk": "^2.2.16",
     "axios": "^1.20.0",
     "mqtt": "^5.15.2",
+    "node-forge": "^1.4.0",
     "node-persist": "^4.0.4",
-    "node-rsa": "^2.0.0",
     "p-queue": "^9.3.3",
-    "patch-package": "^8.0.1",
-    "pem": "^1.14.8"
+    "patch-package": "^8.0.1"
   },
   "optionalDependencies": {
     "@stoprocent/bluetooth-hci-socket": "^2.3.0",
