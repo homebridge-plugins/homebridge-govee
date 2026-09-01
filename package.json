@@ -64,10 +64,10 @@
     "@homebridge/plugin-ui-utils": "^2.2.6",
     "aws-iot-device-sdk": "^2.2.16",
     "axios": "^1.20.0",
-    "mqtt": "^5.15.2",
+    "mqtt": "^5.16.1",
     "node-forge": "^1.4.0",
     "node-persist": "^4.0.4",
-    "p-queue": "^9.3.3",
+    "p-queue": "^10.0.0",
     "patch-package": "^8.0.1"
   },
   "optionalDependencies": {
@@ -75,9 +75,9 @@
     "@stoprocent/noble": "^2.8.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.3.0",
-    "@vitest/coverage-v8": "^4.1.11",
-    "vitest": "^4.1.11"
+    "@antfu/eslint-config": "^9.5.1",
+    "@vitest/coverage-v8": "^5.0.5",
+    "vitest": "^5.0.5"
   },
   "allowScripts": {
     "@serialport/bindings-cpp": true,
