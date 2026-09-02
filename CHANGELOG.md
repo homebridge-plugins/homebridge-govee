@@ -13,6 +13,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(aws): read the identity file in javascript, the system openssl refuses its legacy ciphers
 - chore(deps): dependency updates
 - fix(leak): report a leak from an unread alarm on the device record, the message list can be empty for gateway sensors (#1356)
+- fix(scenes): fetch scene lists one at a time and retry a rate limit, warning when a device gets no selector (#1362)
 
 ## v11.39.0 (2026-08-28)
 
