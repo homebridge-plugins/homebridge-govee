@@ -221,10 +221,18 @@
                 "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
               }
             },
+            "awsBrightnessScale": {
+              "type": "boolean",
+              "title": "AWS Brightness Scale To 254",
+              "description": "Only for a light that reaches full brightness at about 39% in Home: it counts to 254 over AWS rather than 100, so tick this to scale the value.",
+              "condition": {
+                "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
+              }
+            },
             "awsBrightnessNoScale": {
               "type": "boolean",
               "title": "AWS Brightness No Scale",
-              "description": "If true, the brightness value sent to/from via AWS will not be scaled to 0-100.",
+              "description": "Only for a light the plugin scales to 254 by default but which drops to a few percent at full: tick this to send 0-100 as is.",
               "condition": {
                 "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
               }
@@ -1600,6 +1608,7 @@
             "lightDevices[].customAddress",
             "lightDevices[].customIPAddress",
             "lightDevices[].brightnessStep",
+            "lightDevices[].awsBrightnessScale",
             "lightDevices[].awsBrightnessNoScale",
             "lightDevices[].adaptiveLightingShift",
             "lightDevices[].awsColourMode",
