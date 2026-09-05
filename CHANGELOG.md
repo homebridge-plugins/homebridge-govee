@@ -14,6 +14,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - chore(deps): dependency updates
 - fix(leak): report a leak from an unread alarm on the device record, the message list can be empty for gateway sensors (#1356)
 - fix(scenes): fetch scene lists one at a time and retry a rate limit, warning when a device gets no selector (#1362)
+- fix(brightness): default aws brightness to 0-100, scaling only the models that count to 254 (#1364)
 
 ## v11.39.0 (2026-08-28)
 
