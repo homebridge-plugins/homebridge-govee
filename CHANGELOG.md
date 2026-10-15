@@ -9,6 +9,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(ble): match sensor readings when BlueZ reports upper-case addresses (@floringae)
 - fix(lan): keep scanning for devices when the first scan finds none (@matt-royal)
 - fix(h601c): keep adaptive lighting on in the evening, the light stops at 2700k (@tarun101)
+- fix(lan): refresh known device addresses after rediscovery (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
