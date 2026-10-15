@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(lan): keep scanning for devices when the first scan finds none (@matt-royal)
 - fix(h601c): keep adaptive lighting on in the evening, the light stops at 2700k (@tarun101)
 - fix(lan): refresh known device addresses after rediscovery (@ethanjnrg)
+- fix(lan): revoke stale routes when addresses are reused (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
