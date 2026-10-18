@@ -12,6 +12,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(lan): refresh known device addresses after rediscovery (@ethanjnrg)
 - fix(lan): revoke stale routes when addresses are reused (@ethanjnrg)
 - fix(scenes): fetch diy scenes from their own list, so the selector shows them (#1375)
+- fix(aws): send a command again when a device that normally answers stays quiet (#1370)
 
 ## v11.39.1 (2026-10-18)
 
