@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.39.2 (Pending Release)
+
+### Changed
+
+- fix(ble): match sensor readings when BlueZ reports upper-case addresses (@floringae)
+
 ## v11.39.1 (2026-10-18)
 
 ### Changed
