@@ -1108,6 +1108,14 @@
               "condition": {
                 "functionBody": "return (model.switchDevices && model.switchDevices[arrayIndices] && model.switchDevices[arrayIndices].deviceId && model.switchDevices[arrayIndices].deviceId.length === 23 && ['heater', 'cooler'].includes(model.switchDevices[arrayIndices].showAs) && !model.switchDevices[arrayIndices].ignoreDevice);"
               }
+            },
+            "awsPolling": {
+              "type": "boolean",
+              "title": "Ask For Status Every Minute",
+              "description": "If true, the plugin asks this outlet for its status over the AWS connection every minute, instead of waiting for the outlet to send updates. This keeps power readings fresh on outlets that measure power, like the H5086. Needs the AWS connection.",
+              "condition": {
+                "functionBody": "return (model.switchDevices && model.switchDevices[arrayIndices] && model.switchDevices[arrayIndices].deviceId && model.switchDevices[arrayIndices].deviceId.length === 23 && !model.switchDevices[arrayIndices].ignoreDevice);"
+              }
             }
           }
         }
@@ -1690,7 +1698,8 @@
             "switchDevices[].deviceId",
             "switchDevices[].ignoreDevice",
             "switchDevices[].showAs",
-            "switchDevices[].temperatureSource"
+            "switchDevices[].temperatureSource",
+            "switchDevices[].awsPolling"
           ]
         }
       ]
