@@ -11,6 +11,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(h601c): keep adaptive lighting on in the evening, the light stops at 2700k (@tarun101)
 - fix(lan): refresh known device addresses after rediscovery (@ethanjnrg)
 - fix(lan): revoke stale routes when addresses are reused (@ethanjnrg)
+- fix(scenes): fetch diy scenes from their own list, so the selector shows them (#1375)
 
 ## v11.39.1 (2026-10-18)
 
