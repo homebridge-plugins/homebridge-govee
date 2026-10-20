@@ -636,7 +636,7 @@ H5085 (switchSingle)
 H5086 (switchSingle)
   handler: deviceOutletSingle
   service: Outlet
-    CurrentConsumption
+    CurrentConsumption  [format="float", minStep=0.01]
     ElectricCurrent
     On
     Voltage
