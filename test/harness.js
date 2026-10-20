@@ -252,6 +252,7 @@ export function makePlatform(overrides = {}) {
         Service: nameProxy(),
         Characteristic: nameProxy(),
         Categories: nameProxy(),
+        Formats: { FLOAT: 'float', UINT16: 'uint16' },
         uuid: { generate: input => `uuid-${input}` },
         HapStatusError: class extends Error {},
         AdaptiveLightingController: class {
