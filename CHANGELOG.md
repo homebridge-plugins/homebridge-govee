@@ -14,7 +14,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(scenes): fetch diy scenes from their own list, so the selector shows them (#1375)
 - fix(aws): send a command again when a device that normally answers stays quiet (#1370)
 - feat(outlets): add an option to ask an outlet for its status every minute (#1379)
-- ci: update github actions to their latest versions
+- ci: update github actions to their latest versions (#1380)
 
 ## v11.39.1 (2026-10-18)
 
