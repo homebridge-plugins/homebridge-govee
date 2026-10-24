@@ -24,6 +24,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(lights): keep adaptive lighting on after a restart when it ran while the light was off
 - fix(http): log in even when the tap-to-run server is down
 - fix(aws): give each start its own aws connection id, so two instances on one account both work
+- fix(openapi): show presence from the h5127's live events, they were being read as a leak
 
 ## v11.39.1 (2026-10-18)
 
