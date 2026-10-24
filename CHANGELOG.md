@@ -17,6 +17,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - ci: update github actions to their latest versions (#1380)
 - fix(outlets): keep the decimals of an outlet's power reading (#1379)
 - fix(lights): keep adaptive lighting on after a restart (#1382) (@StefanRiese)
+- fix(leak): stop the h5059 and h5830 showing an old leak, the app reads their probes (#1381)
 
 ## v11.39.1 (2026-10-18)
 
