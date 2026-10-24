@@ -26,6 +26,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(aws): give each start its own aws connection id, so two instances on one account both work
 - fix(openapi): show presence from the h5127's live events, they were being read as a leak
 - fix(http): log in again once when govee stops accepting the account token
+- feat(purifiers): show the filter life left, when govee's api reports it
 
 ## v11.39.1 (2026-10-18)
 
