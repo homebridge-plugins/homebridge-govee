@@ -16,6 +16,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat(outlets): add an option to ask an outlet for its status every minute (#1379)
 - ci: update github actions to their latest versions (#1380)
 - fix(outlets): keep the decimals of an outlet's power reading (#1379)
+- fix(lights): keep adaptive lighting on after a restart (#1382) (@StefanRiese)
 
 ## v11.39.1 (2026-10-18)
 
