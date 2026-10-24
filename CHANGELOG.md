@@ -21,6 +21,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(openapi): clear a leak when the sensor reports it is dry (#1381)
 - fix(aws): start aws without waiting for the openapi live connection, it can retry for ever (#1383)
 - fix(lights): keep adaptive lighting on after a restart when it ran while the light was off
+- fix(http): log in even when the tap-to-run server is down
 
 ## v11.39.1 (2026-10-18)
 
