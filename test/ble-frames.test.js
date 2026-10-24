@@ -26,7 +26,9 @@ function checksumOf(frame) {
 }
 
 function expectValidFrame(frame, description) {
-  const buffer = Buffer.isBuffer(frame) ? frame : Buffer.from(frame, 'base64')
+  const buffer = Buffer.isBuffer(frame)
+    ? frame
+    : Buffer.from(frame, 'base64')
   expect(buffer.length, `${description} should be ${PACKET_LENGTH} bytes`).toBe(PACKET_LENGTH)
   expect(checksumOf(buffer), `${description} has a bad checksum`).toBe(buffer[PACKET_LENGTH - 1])
   expect(buffer[0], `${description} should start with the command marker`).toBe(0x33)
@@ -56,7 +58,10 @@ describe('building a bluetooth packet', () => {
   })
 
   it('accepts a command that exactly fills the packet', () => {
-    const exact = [0x33, ...Array.from({ length: 18 }, (_, index) => index + 1)]
+    const exact = [
+      0x33,
+      ...Array.from({ length: 18 }, (_, index) => index + 1),
+    ]
     expectValidFrame(generateCodeFromHexValues(exact, true), 'a full packet')
   })
 })
@@ -84,7 +89,10 @@ describe('the commands the plugin sends', () => {
       const context = { gvModel: model, awsColourMode: 'default' }
       try {
         const { bleParams } = buildCommand(
-          { cmd: 'color', value: { r: 255, g: 128, b: 0 } },
+          {
+            cmd: 'color',
+            value: { r: 255, g: 128, b: 0 },
+          },
           context,
         )
         const frame = frameFor(bleParams)

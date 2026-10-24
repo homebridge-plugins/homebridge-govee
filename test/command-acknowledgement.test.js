@@ -28,7 +28,10 @@ describe('spotting a bare command receipt', () => {
   })
 
   it('recognises one that reports a failure', () => {
-    expect(isCommandAcknowledgement({ ...receipt, state: { result: 0 } })).toBe(true)
+    expect(isCommandAcknowledgement({
+      ...receipt,
+      state: { result: 0 },
+    })).toBe(true)
   })
 
   /**
@@ -36,17 +39,27 @@ describe('spotting a bare command receipt', () => {
    * so a payload carrying even one real reading has to stay reportable.
    */
   it('leaves a payload carrying a reading alone', () => {
-    expect(isCommandAcknowledgement({ ...receipt, state: { onOff: 1, result: 1 } })).toBe(false)
+    expect(isCommandAcknowledgement({
+      ...receipt,
+      state: { onOff: 1, result: 1 },
+    })).toBe(false)
   })
 
   it('leaves a payload we simply do not understand alone', () => {
-    expect(isCommandAcknowledgement({ cmd: 'status', source: 'AWS', state: { somethingNew: 4 } })).toBe(false)
+    expect(isCommandAcknowledgement({
+      cmd: 'status',
+      source: 'AWS',
+      state: { somethingNew: 4 },
+    })).toBe(false)
   })
 
   it('does not treat an empty or missing state as a receipt', () => {
     expect(isCommandAcknowledgement({ cmd: 'turn', source: 'AWS', state: {} })).toBe(false)
     expect(isCommandAcknowledgement({ cmd: 'turn', source: 'AWS' })).toBe(false)
-    expect(isCommandAcknowledgement({ source: 'AWS', state: { result: 1 } })).toBe(false)
+    expect(isCommandAcknowledgement({
+      source: 'AWS',
+      state: { result: 1 },
+    })).toBe(false)
     expect(isCommandAcknowledgement(undefined)).toBe(false)
   })
 })

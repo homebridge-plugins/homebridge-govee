@@ -52,11 +52,21 @@ const PER_LIGHT = {
 
 function platformWith(overrides = {}) {
   return Object.assign(Object.create(GoveePlatform.prototype), {
-    lanClient: { updateDevice: async () => {} },
-    awsClient: { updateDevice: async () => {} },
-    openApiClient: { updateDevice: async () => {} },
-    bleClient: { updateDevice: async () => {} },
-    queue: { add: async fn => fn() },
+    lanClient: {
+      updateDevice: async () => {},
+    },
+    awsClient: {
+      updateDevice: async () => {},
+    },
+    openApiClient: {
+      updateDevice: async () => {},
+    },
+    bleClient: {
+      updateDevice: async () => {},
+    },
+    queue: {
+      add: async fn => fn(),
+    },
     ...overrides,
   })
 }
@@ -83,7 +93,9 @@ describe('sending a command with no connection to send it on', () => {
   it('still sends the same command when api control is on', async () => {
     const sent = []
     const platform = platformWith({
-      openApiClient: { updateDevice: async (_accessory, params) => sent.push(params) },
+      openApiClient: {
+        updateDevice: async (_accessory, params) => sent.push(params),
+      },
     })
 
     await expect(platform.sendDeviceUpdate(accessoryWithout(), PER_LIGHT)).resolves.toBe(true)

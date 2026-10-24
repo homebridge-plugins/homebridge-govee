@@ -34,7 +34,10 @@ describe('spotting an informational broadcast', () => {
   })
 
   it('copes with a payload that has no command at all', () => {
-    expect(isInformationalBroadcast({ source: 'AWS', state: { onOff: 1 } })).toBe(false)
+    expect(isInformationalBroadcast({
+      source: 'AWS',
+      state: { onOff: 1 },
+    })).toBe(false)
     expect(isInformationalBroadcast(undefined)).toBe(false)
   })
 
@@ -46,7 +49,9 @@ describe('spotting an informational broadcast', () => {
     const accessory = {
       displayName: 'TV Backlight 3 Pro',
       context: { gvDeviceId: broadcast.device, gvModel: 'H66A0' },
-      control: { externalUpdate: vi.fn() },
+      control: {
+        externalUpdate: vi.fn(),
+      },
       logDebug: vi.fn(),
       logWarn: vi.fn(),
     }

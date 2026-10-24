@@ -17,7 +17,9 @@ function platformStub() {
   return {
     calls,
     config: { openApiRefreshTime: 30 },
-    log: { warn: msg => calls.push(`warn ${msg}`) },
+    log: {
+      warn: msg => calls.push(`warn ${msg}`),
+    },
     openApiClient: {
       // the broker never answering
       connectMQTT: () => new Promise(() => {}),

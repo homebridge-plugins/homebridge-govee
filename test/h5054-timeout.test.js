@@ -35,7 +35,9 @@ describe('h5054 HTTP timeout containment', () => {
   it('keeps the timed-out sensor untouched and continues to its sibling', async () => {
     const platform = makePlatform()
     const instance = new GoveePlatform()
-    Object.assign(instance, platform, { syncsInFlight: new Set() })
+    Object.assign(instance, platform, {
+      syncsInFlight: new Set(),
+    })
 
     const first = sensor('synthetic-first')
     const second = sensor('synthetic-second')
@@ -52,7 +54,10 @@ describe('h5054 HTTP timeout containment', () => {
       receiveDeviceUpdate(accessory, params)
     }
     instance.httpClient = {
-      getDevices: vi.fn(async () => [httpDevice(first, first.deviceName), httpDevice(second, second.deviceName)]),
+      getDevices: vi.fn(async () => [
+        httpDevice(first, first.deviceName),
+        httpDevice(second, second.deviceName),
+      ]),
       getLeakDeviceWarning: vi.fn(async (id) => {
         if (id === first.device && firstWarningRequest) {
           firstWarningRequest = false
@@ -65,7 +70,14 @@ describe('h5054 HTTP timeout containment', () => {
     await instance.goveeHTTPSync()
 
     expect(instance.httpClient.getLeakDeviceWarning).toHaveBeenCalledTimes(2)
-    expect(updates).toEqual([{ source: 'HTTP', battery: 88, leakDetected: false, online: true }])
+    expect(updates).toEqual([
+      {
+        source: 'HTTP',
+        battery: 88,
+        leakDetected: false,
+        online: true,
+      },
+    ])
     expect(firstAccessory.getService('LeakSensor').getCharacteristic('LeakDetected').value).toBe(1)
     expect(platform.log.entries.filter(entry => entry.level === 'warn')).toHaveLength(1)
 
@@ -80,7 +92,9 @@ describe('h5054 HTTP timeout containment', () => {
     vi.useFakeTimers()
     const instance = new GoveePlatform()
     instance.config = { httpRefreshTime: 1 }
-    instance.log = Object.assign(() => {}, { debugWarn: vi.fn() })
+    instance.log = Object.assign(() => {}, {
+      debugWarn: vi.fn(),
+    })
     instance.syncsInFlight = new Set()
 
     const pending = deferred()
@@ -103,7 +117,9 @@ describe('h5054 HTTP timeout containment', () => {
   it('starts a healthy sibling and then the third leak check while the first remains stalled', async () => {
     const platform = makePlatform()
     const instance = new GoveePlatform()
-    Object.assign(instance, platform, { syncsInFlight: new Set() })
+    Object.assign(instance, platform, {
+      syncsInFlight: new Set(),
+    })
 
     const first = sensor('synthetic-stalled')
     const second = sensor('synthetic-healthy')
@@ -164,7 +180,9 @@ describe('h5054 HTTP timeout containment', () => {
   it('updates an H5106 monitor while two leak-warning calls remain pending', async () => {
     const platform = makePlatform()
     const instance = new GoveePlatform()
-    Object.assign(instance, platform, { syncsInFlight: new Set() })
+    Object.assign(instance, platform, {
+      syncsInFlight: new Set(),
+    })
 
     const first = sensor('synthetic-stalled-first')
     const second = sensor('synthetic-stalled-second')
@@ -212,7 +230,13 @@ describe('h5054 HTTP timeout containment', () => {
       monitorUpdated.promise,
     ])
     expect(activeWarnings).toBe(2)
-    expect(monitorParams).toEqual({ source: 'HTTP', battery: 88, temperature: 2150, humidity: 4530, online: true })
+    expect(monitorParams).toEqual({
+      source: 'HTTP',
+      battery: 88,
+      temperature: 2150,
+      humidity: 4530,
+      online: true,
+    })
 
     firstWarning.resolve([])
     secondWarning.resolve([])
