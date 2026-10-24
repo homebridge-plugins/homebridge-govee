@@ -27,6 +27,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(openapi): show presence from the h5127's live events, they were being read as a leak
 - fix(http): log in again once when govee stops accepting the account token
 - feat(purifiers): show the filter life left, when govee's api reports it
+- fix(lights): keep the h6022 and h60a1 to the colour temperatures they can show
 
 ## v11.39.1 (2026-10-18)
 
