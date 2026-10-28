@@ -63,9 +63,9 @@
   "dependencies": {
     "@homebridge/plugin-ui-utils": "^2.2.6",
     "aws-iot-device-sdk": "^2.2.16",
-    "axios": "^1.20.0",
+    "axios": "^1.21.0",
     "mqtt": "^5.16.1",
-    "node-forge": "^1.4.0",
+    "node-forge": "^1.4.2",
     "node-persist": "^4.0.4",
     "p-queue": "^10.0.0",
     "patch-package": "^8.0.1"
