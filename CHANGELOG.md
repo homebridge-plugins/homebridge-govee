@@ -29,6 +29,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat(purifiers): show the filter life left, when govee's api reports it
 - fix(lights): keep the h6022 and h60a1 to the colour temperatures they can show
 - feat(humidifiers): show when the water tank has run dry, when govee's api reports it (#1294)
+- fix(h1310): stop the fan light throwing on every switch when there is no api key (#1384)
 
 ## v11.39.1 (2026-10-18)
 
