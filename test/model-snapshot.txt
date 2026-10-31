@@ -4550,13 +4550,23 @@ H713A (heater1)
     RotationSpeed  [minStep=33, validValues=[0,33,66,99]]
     SwingMode
 
-H713B (heater1)
-  handler: deviceHeater1A
-  service: Fanv2
+H713B (heater2)
+  handler: deviceHeater2
+  service: Fan
+    On
+    RotationSpeed  [minStep=25, validValues=[0,25,50,75,100]]
+  service: HeaterCooler
     Active
+    CurrentTemperature
+    HeatingThresholdTemperature  [maxValue=30, minStep=1, minValue=5]
     LockPhysicalControls
-    RotationSpeed  [minStep=33, validValues=[0,33,66,99]]
     SwingMode
+    TargetHeaterCoolerState  [maxValue=1, minValue=0, validValues=[0,1]]
+  service: Lightbulb
+    Brightness
+    Hue
+    On
+    Saturation
 
 H713C (heater1)
   handler: deviceHeater1A
