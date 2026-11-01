@@ -31,6 +31,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat(humidifiers): show when the water tank has run dry, when govee's api reports it (#1294)
 - fix(h1310): stop the fan light throwing on every switch when there is no api key (#1384)
 - fix(h713b): put the heater back on the handler its controls worked on (#1386)
+- fix(aws): apply a light's aws brightness scale to 254 setting, which was ignored
 
 ## v11.39.1 (2026-10-18)
 
