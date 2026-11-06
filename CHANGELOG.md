@@ -35,6 +35,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(sockets): show a socket as a heater again, it failed with "not a constructor" (#1388)
 - fix(valves): turn a valve off after its duration when it was on before a restart (#1387)
 - fix(ble): connect to bluetooth-only lights on linux (@ldtnz)
+- fix(http): fetch tap-to-runs with the account token (@StefanRiese)
 
 ## v11.39.1 (2026-10-18)
 
