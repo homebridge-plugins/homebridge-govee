@@ -37,6 +37,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(ble): connect to bluetooth-only lights on linux (@ldtnz)
 - fix(http): fetch tap-to-runs with the account token (@StefanRiese)
 - fix(ttr): keep the account topic out of the tap-to-run debug line (@StefanRiese)
+- fix(ttr): read scene codes from govee's preset tap-to-runs (@StefanRiese)
 
 ## v11.39.1 (2026-10-18)
 
