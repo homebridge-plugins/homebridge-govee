@@ -33,6 +33,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(aws): apply a light's aws brightness scale to 254 setting, which was ignored
 - fix(ble): on a mac, point a bluetooth permission error at the privacy setting, not setcap
 - fix(sockets): show a socket as a heater again, it failed with "not a constructor" (#1388)
+- fix(valves): turn a valve off after its duration when it was on before a restart (#1387)
 
 ## v11.39.1 (2026-10-18)
 
