@@ -38,6 +38,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(http): fetch tap-to-runs with the account token (@StefanRiese)
 - fix(ttr): keep the account topic out of the tap-to-run debug line (@StefanRiese)
 - fix(ttr): read scene codes from govee's preset tap-to-runs (@StefanRiese)
+- fix: read the h7142's humidity, which showed 0% (#1294)
 
 ## v11.39.1 (2026-10-18)
 
