@@ -32,6 +32,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(h713b): put the heater back on the handler its controls worked on (#1386)
 - fix(aws): apply a light's aws brightness scale to 254 setting, which was ignored
 - fix(ble): on a mac, point a bluetooth permission error at the privacy setting, not setcap
+- fix(sockets): show a socket as a heater again, it failed with "not a constructor" (#1388)
 
 ## v11.39.1 (2026-10-18)
 
