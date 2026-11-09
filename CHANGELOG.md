@@ -40,6 +40,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(ttr): read scene codes from govee's preset tap-to-runs (@StefanRiese)
 - fix: read the h7142's humidity, which showed 0% (#1294)
 - fix(openapi): keep a toggle's state when govee reports it as empty (#1395)
+- feat: show the h7107's room temperature (#1394)
 
 ## v11.39.1 (2026-10-18)
 
