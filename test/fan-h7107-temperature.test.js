@@ -91,6 +91,17 @@ describe('h7107 room temperature', () => {
     expect(accessory.getService('TemperatureSensor')).toBeUndefined()
   })
 
+  it('leads the tile with the fan, not the light or the temperature', () => {
+    const { accessory, device } = build()
+    device.externalUpdate({
+      source: 'AWS',
+      commands: ['qhCBCq2YAAAAAAAAAAAAAAAAAAQ='],
+    })
+    expect(accessory.getService('Fanv2').isPrimary).toBe(true)
+    expect(accessory.getService('Lightbulb').isPrimary).toBe(false)
+    expect(accessory.getService('TemperatureSensor').isPrimary).toBe(false)
+  })
+
   it('no longer reports the frame as unknown', () => {
     const { accessory, device } = build()
     device.externalUpdate({

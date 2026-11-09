@@ -4314,7 +4314,7 @@ H7106 (fan)
 
 H7107 (fan)
   handler: deviceFanH7107
-  service: Fanv2
+  service: Fanv2 *primary
     Active
     RotationSpeed  [maxValue=100, minStep=1, minValue=0, unit="unitless"]
     SwingMode
