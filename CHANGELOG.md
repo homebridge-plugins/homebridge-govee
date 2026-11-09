@@ -42,6 +42,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(openapi): keep a toggle's state when govee reports it as empty (#1395)
 - feat: show the h7107's room temperature (#1394)
 - fix: lead the h7107's tile with the fan
+- fix(scenes): cap the scene selector at 97 scenes, so lights with more still show it (#1362)
 
 ## v11.39.1 (2026-10-18)
 
