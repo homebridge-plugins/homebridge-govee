@@ -43,6 +43,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat: show the h7107's room temperature (#1394)
 - fix: lead the h7107's tile with the fan
 - fix(scenes): cap the scene selector at 97 scenes, so lights with more still show it (#1362)
+- fix(h7107): ask the fan for its status every minute, so its temperature stays current (#1394)
 
 ## v11.39.1 (2026-10-18)
 
