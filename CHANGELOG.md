@@ -47,6 +47,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: treat the h600c and h6008 bulbs as matter models (#1399) (@R-STR)
 - chore(deps): dependency updates
 - feat(h60b2): control each head of the tree lamp as its own light, over lan where it can, with a govee login for their state (#1395) (@ethanjnrg)
+- fix(lights): name each zone light in the home app, they all showed the accessory's name (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
