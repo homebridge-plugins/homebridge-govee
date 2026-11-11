@@ -50,6 +50,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(lights): name each zone light in the home app (@ethanjnrg)
 - fix(lights): follow a zone light's saturation, as the main light does (@ethanjnrg)
 - fix(lights): send a zone light's white again after a colour (@ethanjnrg)
+- fix(lights): ask for a zone light's state after a whole-light change (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
