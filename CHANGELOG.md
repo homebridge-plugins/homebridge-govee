@@ -48,6 +48,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(lights): switch a light off when home sets it to 0% (#1397)
 - feat(h60b2): control each head of the tree lamp as its own light (#1395) (@ethanjnrg)
 - fix(lights): name each zone light in the home app (@ethanjnrg)
+- fix(lights): follow a zone light's saturation, as the main light does (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
