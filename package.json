@@ -61,11 +61,11 @@
     "changelog:sync": "node .github/scripts/sync-changelog.mjs"
   },
   "dependencies": {
-    "@homebridge/plugin-ui-utils": "^2.2.6",
+    "@homebridge/plugin-ui-utils": "^2.3.0",
     "aws-iot-device-sdk": "^2.2.16",
-    "axios": "^1.20.0",
+    "axios": "^1.21.1",
     "mqtt": "^5.16.1",
-    "node-forge": "^1.4.0",
+    "node-forge": "^1.4.3",
     "node-persist": "^4.0.4",
     "p-queue": "^10.0.0",
     "patch-package": "^8.0.1"
@@ -75,9 +75,9 @@
     "@stoprocent/noble": "^2.8.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.5.1",
-    "@vitest/coverage-v8": "^5.0.5",
-    "vitest": "^5.0.5"
+    "@antfu/eslint-config": "^10.0.0",
+    "@vitest/coverage-v8": "^5.1.0",
+    "vitest": "^5.1.0"
   },
   "allowScripts": {
     "@serialport/bindings-cpp": true,
