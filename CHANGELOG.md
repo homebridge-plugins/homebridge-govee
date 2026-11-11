@@ -46,6 +46,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(h7107): ask the fan for its status every minute, so its temperature stays current (#1394)
 - fix: treat the h600c and h6008 bulbs as matter models (#1399) (@R-STR)
 - fix(lights): switch a light off when home sets it to 0% (#1397)
+- feat(h60b2): control each head of the tree lamp as its own light (#1395) (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
