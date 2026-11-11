@@ -48,6 +48,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - chore(deps): dependency updates
 - feat(h60b2): control each head of the tree lamp as its own light, over lan where it can, with a govee login for their state (#1395) (@ethanjnrg)
 - fix(lights): name each zone light in the home app, they all showed the accessory's name (@ethanjnrg)
+- fix(lights): follow a zone light's saturation, so home's cooler white swatches reach it (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
