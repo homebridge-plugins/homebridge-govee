@@ -44,6 +44,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: lead the h7107's tile with the fan
 - fix(scenes): cap the scene selector at 97 scenes, so lights with more still show it (#1362)
 - fix(h7107): ask the fan for its status every minute, so its temperature stays current (#1394)
+- fix: treat the h600c and h6008 bulbs as matter models (#1399) (@R-STR)
 
 ## v11.39.1 (2026-10-18)
 
