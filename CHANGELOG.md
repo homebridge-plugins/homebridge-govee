@@ -8,6 +8,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 - fix(ble): match sensor readings when BlueZ reports upper-case addresses (@floringae)
 - fix(lan): keep scanning for devices when the first scan finds none (@matt-royal)
+- Add new constants H600C and H6008 (@R-STR)
 
 ## v11.39.1 (2026-10-18)
 
