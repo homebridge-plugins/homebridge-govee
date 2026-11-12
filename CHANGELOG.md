@@ -52,6 +52,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(lights): send a zone light's white again after a colour, it was skipped if it matched the last white (@ethanjnrg)
 - fix(lights): ask for a zone light's state after a whole-light change, so its tile follows within seconds (@ethanjnrg)
 - feat(h60b2): set a head's white as kelvin, so it lights the head's white leds like the whole lamp does (@ethanjnrg)
+- fix(lights): show a zone light's colour in home when it changes elsewhere, it kept showing its last white (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
