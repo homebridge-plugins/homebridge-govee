@@ -59,7 +59,9 @@ describe.each(handlers)('%s battery status', (_name, DeviceClass) => {
 
     expect(device.battService.getCharacteristic(device.hapChar.BatteryLevel).value).toBe(20)
     expect(device.battService.getCharacteristic(device.hapChar.StatusLowBattery).value).toBe(1)
-    expect(batteryUpdates.mock.calls).toEqual([[device.hapChar.StatusLowBattery, 1]])
+    expect(batteryUpdates.mock.calls).toEqual([
+      [device.hapChar.StatusLowBattery, 1],
+    ])
     expect(accessory.log.calls).toEqual([])
   })
 
@@ -73,13 +75,17 @@ describe.each(handlers)('%s battery status', (_name, DeviceClass) => {
     device.lowBattThreshold = 20
     await device.externalUpdate({ battery: 20 })
 
-    expect(batteryUpdates.mock.calls).toEqual([[device.hapChar.StatusLowBattery, 1]])
+    expect(batteryUpdates.mock.calls).toEqual([
+      [device.hapChar.StatusLowBattery, 1],
+    ])
 
     batteryUpdates.mockClear()
     device.lowBattThreshold = 19
     await device.externalUpdate({ battery: 20 })
 
-    expect(batteryUpdates.mock.calls).toEqual([[device.hapChar.StatusLowBattery, 0]])
+    expect(batteryUpdates.mock.calls).toEqual([
+      [device.hapChar.StatusLowBattery, 0],
+    ])
     expect(accessory.log.calls).toEqual([])
   })
 

@@ -52,7 +52,10 @@ describe('a command the device does not answer', () => {
 
   // Teach the client that this device answers commands, as it learns in use
   async function provenToAnswer(accessory) {
-    await client.updateDevice(accessory, { cmd: 'turn', data: { val: 1 } })
+    await client.updateDevice(accessory, {
+      cmd: 'turn',
+      data: { val: 1 },
+    })
     answer(accessory, published.at(-1).msg.transaction)
     published.length = 0
   }
@@ -65,7 +68,10 @@ describe('a command the device does not answer', () => {
       accountId: '1',
       clientId: '2',
       iotEndpoint: 'example.invalid',
-      log: Object.assign(vi.fn(), { debug: vi.fn(), debugWarn: vi.fn() }),
+      log: Object.assign(vi.fn(), {
+        debug: vi.fn(),
+        debugWarn: vi.fn(),
+      }),
       receiveUpdateAWS: vi.fn(),
     }
     client = new AwsClient(platform, { key: 'k', cert: 'c' })
@@ -80,11 +86,17 @@ describe('a command the device does not answer', () => {
     const accessory = makeAccessory()
     await provenToAnswer(accessory)
 
-    await client.updateDevice(accessory, { cmd: 'turn', data: { val: 0 } })
+    await client.updateDevice(accessory, {
+      cmd: 'turn',
+      data: { val: 0 },
+    })
     await vi.advanceTimersByTimeAsync(5000)
 
     expect(published).toHaveLength(2)
-    expect(published[1].msg).toMatchObject({ cmd: 'turn', data: { val: 0 } })
+    expect(published[1].msg).toMatchObject({
+      cmd: 'turn',
+      data: { val: 0 },
+    })
     // a fresh transaction, so the answer to the second try can be told apart
     expect(published[1].msg.transaction).not.toBe(published[0].msg.transaction)
   })
@@ -93,7 +105,10 @@ describe('a command the device does not answer', () => {
     const accessory = makeAccessory()
     await provenToAnswer(accessory)
 
-    await client.updateDevice(accessory, { cmd: 'turn', data: { val: 0 } })
+    await client.updateDevice(accessory, {
+      cmd: 'turn',
+      data: { val: 0 },
+    })
     answer(accessory, published[0].msg.transaction)
     await vi.advanceTimersByTimeAsync(20000)
 
@@ -105,7 +120,10 @@ describe('a command the device does not answer', () => {
     const accessory = makeAccessory()
     await provenToAnswer(accessory)
 
-    await client.updateDevice(accessory, { cmd: 'turn', data: { val: 0 } })
+    await client.updateDevice(accessory, {
+      cmd: 'turn',
+      data: { val: 0 },
+    })
     await vi.advanceTimersByTimeAsync(10000)
 
     expect(published).toHaveLength(2)
@@ -119,7 +137,10 @@ describe('a command the device does not answer', () => {
   it('leaves alone a device that has never answered', async () => {
     const accessory = makeAccessory()
 
-    await client.updateDevice(accessory, { cmd: 'turn', data: { val: 0 } })
+    await client.updateDevice(accessory, {
+      cmd: 'turn',
+      data: { val: 0 },
+    })
     await vi.advanceTimersByTimeAsync(20000)
 
     expect(published).toHaveLength(1)
@@ -130,8 +151,14 @@ describe('a command the device does not answer', () => {
     const accessory = makeAccessory()
     await provenToAnswer(accessory)
 
-    await client.updateDevice(accessory, { cmd: 'brightness', data: { val: 20 } })
-    await client.updateDevice(accessory, { cmd: 'brightness', data: { val: 80 } })
+    await client.updateDevice(accessory, {
+      cmd: 'brightness',
+      data: { val: 20 },
+    })
+    await client.updateDevice(accessory, {
+      cmd: 'brightness',
+      data: { val: 80 },
+    })
     answer(accessory, published[1].msg.transaction)
     await vi.advanceTimersByTimeAsync(20000)
 
@@ -139,9 +166,16 @@ describe('a command the device does not answer', () => {
   })
 
   it('gives each of several commands sent together its own transaction', async () => {
-    const lights = [makeAccessory('A'), makeAccessory('B'), makeAccessory('C')]
+    const lights = [
+      makeAccessory('A'),
+      makeAccessory('B'),
+      makeAccessory('C'),
+    ]
     for (const light of lights) {
-      await client.updateDevice(light, { cmd: 'turn', data: { val: 0 } })
+      await client.updateDevice(light, {
+        cmd: 'turn',
+        data: { val: 0 },
+      })
     }
 
     expect(new Set(published.map(p => p.msg.transaction)).size).toBe(3)

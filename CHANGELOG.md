@@ -54,6 +54,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat(h60b2): set a head's white as kelvin, on its white leds (@ethanjnrg)
 - fix(lights): show a zone light's colour in home when it changes elsewhere (@ethanjnrg)
 - feat(lights): switch a sync box's hdmi input from home, when govee's api lists it (#1289)
+- chore(deps): dependency updates
 
 ## v11.39.1 (2026-10-18)
 
