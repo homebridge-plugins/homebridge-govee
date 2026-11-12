@@ -46,13 +46,13 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(h7107): ask the fan for its status every minute, so its temperature stays current (#1394)
 - fix: treat the h600c and h6008 bulbs as matter models (#1399) (@R-STR)
 - chore(deps): dependency updates
-- feat(h60b2): control each head of the tree lamp as its own light, over lan where it can, with a govee login for their state (#1395) (@ethanjnrg)
-- fix(lights): name each zone light in the home app, they all showed the accessory's name (@ethanjnrg)
-- fix(lights): follow a zone light's saturation, so home's cooler white swatches reach it (@ethanjnrg)
-- fix(lights): send a zone light's white again after a colour, it was skipped if it matched the last white (@ethanjnrg)
-- fix(lights): ask for a zone light's state after a whole-light change, so its tile follows within seconds (@ethanjnrg)
-- feat(h60b2): set a head's white as kelvin, so it lights the head's white leds like the whole lamp does (@ethanjnrg)
-- fix(lights): show a zone light's colour in home when it changes elsewhere, it kept showing its last white (@ethanjnrg)
+- feat(h60b2): control each head of the tree lamp as its own light (#1395) (@ethanjnrg)
+- fix(lights): name each zone light in the home app (@ethanjnrg)
+- fix(lights): follow a zone light's saturation, as the main light does (@ethanjnrg)
+- fix(lights): send a zone light's white again after a colour (@ethanjnrg)
+- fix(lights): ask for a zone light's state after a whole-light change (@ethanjnrg)
+- feat(h60b2): set a head's white as kelvin, on its white leds (@ethanjnrg)
+- fix(lights): show a zone light's colour in home when it changes elsewhere (@ethanjnrg)
 
 ## v11.39.1 (2026-10-18)
 
