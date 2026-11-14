@@ -96,7 +96,9 @@ if (topIsReleased) {
   const rest = lines.slice(headingIndex + 1)
   const nextHeading = rest.findIndex(l => l.startsWith('## '))
   sectionStart = headingIndex
-  sectionEnd = nextHeading === -1 ? lines.length : headingIndex + 1 + nextHeading
+  sectionEnd = nextHeading === -1
+    ? lines.length
+    : headingIndex + 1 + nextHeading
   existingBullets = lines.slice(sectionStart, sectionEnd)
     .filter(l => l.startsWith('- '))
     .map(l => l.slice(2))
@@ -112,8 +114,19 @@ const heading = topIsReleased
   ? `## ${usesVPrefix ? 'v' : ''}${nextPatch(tagVersion)} (Pending Release)`
   : lines[headingIndex]
 
-const section = [heading, '', subheading, '', ...bullets.map(b => `- ${b}`), '']
-const updated = [...lines.slice(0, sectionStart), ...section, ...lines.slice(sectionEnd)].join('\n')
+const section = [
+  heading,
+  '',
+  subheading,
+  '',
+  ...bullets.map(b => `- ${b}`),
+  '',
+]
+const updated = [
+  ...lines.slice(0, sectionStart),
+  ...section,
+  ...lines.slice(sectionEnd),
+].join('\n')
 
 if (updated === original) {
   console.log(`${CHANGELOG} already matches all ${commits.length} unreleased commits since ${tag}.`)

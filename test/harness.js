@@ -43,7 +43,10 @@ function nameProxy() {
         return prop
       }
       if (!cache.has(prop)) {
-        cache.set(prop, { ...CHARACTERISTIC_VALUES[prop], toString: () => prop })
+        cache.set(prop, {
+          ...CHARACTERISTIC_VALUES[prop],
+          toString: () => prop,
+        })
       }
       return cache.get(prop)
     },
@@ -235,7 +238,10 @@ function deviceIdFor(model) {
   deviceCounter += 1
   const hex = [...model].map(char => char.charCodeAt(0).toString(16).padStart(2, '0'))
   const suffix = deviceCounter.toString(16).padStart(6, '0').match(/../g)
-  return [...hex.slice(0, 4), ...suffix].join(':').toUpperCase()
+  return [
+    ...hex.slice(0, 4),
+    ...suffix,
+  ].join(':').toUpperCase()
 }
 
 export function makePlatform(overrides = {}) {
@@ -253,7 +259,9 @@ export function makePlatform(overrides = {}) {
         Characteristic: nameProxy(),
         Categories: nameProxy(),
         Formats: { FLOAT: 'float', UINT16: 'uint16' },
-        uuid: { generate: input => `uuid-${input}` },
+        uuid: {
+          generate: input => `uuid-${input}`,
+        },
         HapStatusError: class extends Error {},
         AdaptiveLightingController: class {
           constructor(service, options) {
@@ -290,7 +298,10 @@ export function makePlatform(overrides = {}) {
       }
     },
     storageClientData: false,
-    storageData: { getItem: async () => null, setItem: async () => {} },
+    storageData: {
+      getItem: async () => null,
+      setItem: async () => {},
+    },
     sendDeviceUpdate: async () => {},
     updateAccessoryStatus: () => {},
     ...overrides,

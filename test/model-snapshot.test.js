@@ -36,7 +36,9 @@ function everyModel() {
       }
     })
   })
-  return [...seen.entries()].sort(([a], [b]) => a.localeCompare(b))
+  return [
+    ...seen.entries(),
+  ].sort(([a], [b]) => a.localeCompare(b))
 }
 
 /**
@@ -119,11 +121,15 @@ function formatAccessory(accessory) {
     .sort((a, b) => `${a.type}${a.subtype ?? ''}`.localeCompare(`${b.type}${b.subtype ?? ''}`))
 
   services.forEach((service) => {
-    const subtype = service.subtype ? ` (${service.subtype})` : ''
+    const subtype = service.subtype
+      ? ` (${service.subtype})`
+      : ''
     const primary = service.isPrimary ? ' *primary' : ''
     lines.push(`  service: ${service.type}${subtype}${primary}`)
 
-    const chars = [...service.characteristics.values()]
+    const chars = [
+      ...service.characteristics.values(),
+    ]
       .sort((a, b) => a.name.localeCompare(b.name))
     chars.forEach((characteristic) => {
       lines.push(`    ${characteristic.name}${formatProps(characteristic.props)}`)
@@ -172,7 +178,9 @@ describe('what every supported model becomes', () => {
       const accessory = describeAccessory(instance, uuid)
 
       lines.push(`${model} (${type})`)
-      lines.push(...(accessory ? formatAccessory(accessory) : ['  NOT CREATED']))
+      lines.push(...(accessory
+        ? formatAccessory(accessory)
+        : ['  NOT CREATED']))
       lines.push('')
     })
 

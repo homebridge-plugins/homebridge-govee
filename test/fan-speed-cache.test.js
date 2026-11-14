@@ -36,7 +36,12 @@ function makeRestoredAccessory(model, restoredPercent) {
   const accessory = makeAccessory(model)
   const service = accessory.addService('Fanv2')
   const speed = service.getCharacteristic('RotationSpeed')
-  speed.setProps({ maxValue: 100, minStep: 1, minValue: 0, unit: 'unitless' })
+  speed.setProps({
+    maxValue: 100,
+    minStep: 1,
+    minValue: 0,
+    unit: 'unitless',
+  })
   speed.value = restoredPercent
   return accessory
 }
@@ -48,7 +53,10 @@ function build(Handler, accessory) {
       sent.push(params)
     },
   })
-  return { device: new Handler(platform, accessory), sent }
+  return {
+    device: new Handler(platform, accessory),
+    sent,
+  }
 }
 
 describe('the fan speed cache', () => {
