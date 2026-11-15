@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.40.1 (Pending Release)
+
+### Changed
+
+- fix: say what govee replied when the device list comes back empty (#1402)
+
 ## v11.40.0 (2026-11-14)
 
 ### Changed
