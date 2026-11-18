@@ -7,6 +7,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Changed
 
 - fix: say what govee replied when the device list comes back empty (#1402)
+- fix: turn a light back on when home sends on just after setting it to 0%
 
 ## v11.40.0 (2026-11-14)
 
