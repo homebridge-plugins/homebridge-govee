@@ -28,28 +28,28 @@ function makePlatform(extra = {}) {
 }
 
 /**
- * AWS keeps one connection per client id and drops the older one when another
- * arrives with the same id. Two Homebridge instances on one Govee account must
- * therefore never share one, or only one of them can work at a time (#590).
+ * The connection id must be the same on every start. A random id per start
+ * was followed by commands that no longer reached the lights, while their
+ * status updates still arrived (#1370).
  */
 describe('the id the aws connection uses', () => {
-  it('differs between two instances on the same account', () => {
+  it('is the same on every start of the same account', () => {
     created.length = 0
     const login = { clientId: 'hb0123456789abcdef0123456789abcd' }
-    const first = new AwsClient(makePlatform(login), { key: 'k', cert: 'c' })
-    const second = new AwsClient(makePlatform(login), { key: 'k', cert: 'c' })
+    expect(new AwsClient(makePlatform(login), { key: 'k', cert: 'c' })).toBeTruthy()
+    expect(new AwsClient(makePlatform(login), { key: 'k', cert: 'c' })).toBeTruthy()
 
-    expect(first).not.toBe(second)
     expect(created).toHaveLength(2)
-    expect(created[0].clientId).not.toBe(created[1].clientId)
+    expect(created[0].clientId).toBe('AP/1/hb0123456789abcdef0123456789abcd')
+    expect(created[1].clientId).toBe(created[0].clientId)
   })
 
-  it('stays under the account, even when the login came from the cache', () => {
+  it('is the same on every start that reuses the cached login', () => {
     created.length = 0
     // A restart that reuses the cached login has no login client id at all
-    const client = new AwsClient(makePlatform(), { key: 'k', cert: 'c' })
+    expect(new AwsClient(makePlatform(), { key: 'k', cert: 'c' })).toBeTruthy()
+    expect(new AwsClient(makePlatform(), { key: 'k', cert: 'c' })).toBeTruthy()
 
-    expect(client).toBeTruthy()
-    expect(created[0].clientId).toMatch(/^AP\/1\/hb[0-9a-f]{30}$/)
+    expect(created[1].clientId).toBe(created[0].clientId)
   })
 })

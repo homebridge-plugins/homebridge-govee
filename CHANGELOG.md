@@ -8,6 +8,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 - fix: say what govee replied when the device list comes back empty (#1402)
 - fix: turn a light back on when home sends on just after setting it to 0%
+- fix(aws): keep one aws connection id across starts, commands stopped reaching lights (#1370)
 
 ## v11.40.0 (2026-11-14)
 
