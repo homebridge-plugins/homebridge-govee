@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: turn a light back on when home sends on just after setting it to 0%
 - fix(aws): keep one aws connection id across starts, commands stopped reaching lights (#1370)
 - chore(deps): dependency updates
+- feat(fans): add a hideFan option to show a ceiling fan's lights only (#1403) (@viccao)
 
 ## v11.40.0 (2026-11-14)
 

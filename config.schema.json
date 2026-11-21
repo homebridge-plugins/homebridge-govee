@@ -1264,6 +1264,14 @@
                 "functionBody": "return (model.fanDevices && model.fanDevices[arrayIndices] && model.fanDevices[arrayIndices].deviceId && model.fanDevices[arrayIndices].deviceId.length === 23);"
               }
             },
+            "hideFan": {
+              "type": "boolean",
+              "title": "Hide Fan",
+              "description": "Ceiling fans only (H1310, H1370, R1310). Enable this to show only the light, for a fan whose motor has failed or that is only used as a light. Ignored if Hide Light is on.",
+              "condition": {
+                "functionBody": "return (model.fanDevices && model.fanDevices[arrayIndices] && model.fanDevices[arrayIndices].deviceId && model.fanDevices[arrayIndices].deviceId.length === 23 && !model.fanDevices[arrayIndices].ignoreDevice);"
+              }
+            },
             "hideLight": {
               "type": "boolean",
               "title": "Hide Light",
@@ -1758,6 +1766,7 @@
             "fanDevices[].label",
             "fanDevices[].deviceId",
             "fanDevices[].ignoreDevice",
+            "fanDevices[].hideFan",
             "fanDevices[].hideLight"
           ]
         }
