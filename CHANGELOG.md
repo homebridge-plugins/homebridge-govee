@@ -11,6 +11,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(aws): keep one aws connection id across starts, commands stopped reaching lights (#1370)
 - feat(fans): add a hideFan option to show a ceiling fan's lights only (#1403) (@viccao)
 - fix: send the new colour, not the old one, to fan, heater and humidifier lights
+- chore(deps): dependency updates
 
 ## v11.40.0 (2026-11-14)
 
