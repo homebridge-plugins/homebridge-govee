@@ -7,6 +7,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Changed
 
 - fix(aws): remember across restarts which lights answer, so a lost command is still resent (#1370)
+- fix: detect matter models from govee's matterId and add r707a, h60b2 and h607c (@ethanjnrg)
 
 ## v11.41.0 (2026-11-22)
 
