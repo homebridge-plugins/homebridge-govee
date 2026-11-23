@@ -8,6 +8,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 - fix(aws): remember across restarts which lights answer, so a lost command is still resent (#1370)
 - fix: detect matter models from govee's matterId and add r707a, h60b2 and h607c (@ethanjnrg)
+- feat(lights): support LAN-first ptReal scene selector without an OpenAPI key (@ethanjnrg)
 
 ## v11.41.0 (2026-11-22)
 
