@@ -981,7 +981,7 @@
             "sceneSelector": {
               "title": "Scene Selector: Scenes",
               "type": "boolean",
-              "description": "Offer this device's preset scenes in a scene selector dropdown - a separate TV-style accessory added to HomeKit manually using the bridge's setup code. The accessory appears when any Scene Selector option is enabled. Needs a Govee API key.",
+              "description": "Offer this device's preset scenes in a scene selector dropdown - a separate TV-style accessory added to HomeKit manually using the bridge's setup code. The accessory appears when any Scene Selector option is enabled. Works over LAN/AWS using Govee's preset scene library, or via a Govee API key.",
               "condition": {
                 "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
               }
