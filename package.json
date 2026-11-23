@@ -65,7 +65,7 @@
     "aws-iot-device-sdk": "^2.2.16",
     "axios": "^1.21.1",
     "mqtt": "^5.16.1",
-    "node-forge": "^1.4.3",
+    "node-forge": "^1.4.4",
     "node-persist": "^4.0.4",
     "p-queue": "^10.0.0",
     "patch-package": "^8.0.1"
