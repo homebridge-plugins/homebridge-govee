@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.41.1 (Pending Release)
+
+### Changed
+
+- fix: detect matter models from govee's matterId and add r707a, h60b2 and h607c (@ethanjnrg)
+
 ## v11.41.0 (2026-11-22)
 
 ### Changed
