@@ -181,6 +181,32 @@ describe('a command the device does not answer', () => {
     expect(new Set(published.map(p => p.msg.transaction)).size).toBe(3)
   })
 
+  /**
+   * Which devices answer was only known for as long as Homebridge ran. After a
+   * restart, the first command of the evening went unchased, and that was the
+   * one lost: the lights stayed off at 5pm with no second try (#1370).
+   */
+  it('still sends it again after a restart, for a device that answered before', async () => {
+    const accessory = makeAccessory()
+    await provenToAnswer(accessory)
+
+    // Homebridge restarts: a new client, the same (cached) accessory
+    client = new AwsClient(platform, { key: 'k', cert: 'c' })
+    client.connected = true
+
+    await client.updateDevice(accessory, {
+      cmd: 'turn',
+      data: { val: 1 },
+    })
+    await vi.advanceTimersByTimeAsync(5000)
+
+    expect(published).toHaveLength(2)
+    expect(published[1].msg).toMatchObject({
+      cmd: 'turn',
+      data: { val: 1 },
+    })
+  })
+
   it('still passes every message on to the platform', () => {
     const accessory = makeAccessory()
     answer(accessory, 'a_1')
