@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.41.1 (Pending Release)
+
+### Changed
+
+- feat(lights): support LAN-first ptReal scene selector without an OpenAPI key
+
 ## v11.41.0 (2026-11-22)
 
 ### Changed
