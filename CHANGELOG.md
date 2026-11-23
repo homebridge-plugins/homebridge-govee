@@ -2,6 +2,12 @@
 
 All notable changes to `@homebridge-plugins/homebridge-govee` will be documented in this file.
 
+## v11.41.1 (Pending Release)
+
+### Changed
+
+- fix(aws): learn which lights answer commands, and remember it, so a lost one is resent (#1370)
+
 ## v11.41.0 (2026-11-22)
 
 ### Changed
