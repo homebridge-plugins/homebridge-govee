@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: detect matter models from govee's matterId and add r707a, h60b2 and h607c (@ethanjnrg)
 - feat(lights): support LAN-first ptReal scene selector without an OpenAPI key (@ethanjnrg)
 - chore(deps): dependency updates
+- feat(lights): support sceneType 6 in LAN-first ptReal scene selector (@ethanjnrg)
 
 ## v11.41.0 (2026-11-22)
 
