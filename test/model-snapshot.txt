@@ -4457,7 +4457,7 @@ H7131 (heater2)
     HeatingThresholdTemperature  [maxValue=30, minStep=1, minValue=5]
     LockPhysicalControls
     SwingMode
-    TargetHeaterCoolerState  [maxValue=1, minValue=0, validValues=[0,1]]
+    TargetHeaterCoolerState  [maxValue=1, minValue=1, validValues=[1]]
   service: Lightbulb
     Brightness
     Hue
@@ -4475,7 +4475,7 @@ H7132 (heater2)
     HeatingThresholdTemperature  [maxValue=30, minStep=1, minValue=5]
     LockPhysicalControls
     SwingMode
-    TargetHeaterCoolerState  [maxValue=1, minValue=0, validValues=[0,1]]
+    TargetHeaterCoolerState  [maxValue=1, minValue=1, validValues=[1]]
   service: Lightbulb
     Brightness
     Hue
@@ -4493,7 +4493,7 @@ H7133 (heater2)
     HeatingThresholdTemperature  [maxValue=30, minStep=1, minValue=5]
     LockPhysicalControls
     SwingMode
-    TargetHeaterCoolerState  [maxValue=1, minValue=0, validValues=[0,1]]
+    TargetHeaterCoolerState  [maxValue=1, minValue=1, validValues=[1]]
   service: Lightbulb
     Brightness
     Hue
@@ -4511,7 +4511,7 @@ H7134 (heater2)
     HeatingThresholdTemperature  [maxValue=30, minStep=1, minValue=5]
     LockPhysicalControls
     SwingMode
-    TargetHeaterCoolerState  [maxValue=1, minValue=0, validValues=[0,1]]
+    TargetHeaterCoolerState  [maxValue=1, minValue=1, validValues=[1]]
   service: Lightbulb
     Brightness
     Hue
@@ -4529,7 +4529,7 @@ H7135 (heater2)
     HeatingThresholdTemperature  [maxValue=30, minStep=1, minValue=5]
     LockPhysicalControls
     SwingMode
-    TargetHeaterCoolerState  [maxValue=1, minValue=0, validValues=[0,1]]
+    TargetHeaterCoolerState  [maxValue=1, minValue=1, validValues=[1]]
   service: Lightbulb
     Brightness
     Hue
@@ -4561,7 +4561,7 @@ H713B (heater2)
     HeatingThresholdTemperature  [maxValue=30, minStep=1, minValue=5]
     LockPhysicalControls
     SwingMode
-    TargetHeaterCoolerState  [maxValue=1, minValue=0, validValues=[0,1]]
+    TargetHeaterCoolerState  [maxValue=1, minValue=1, validValues=[1]]
   service: Lightbulb
     Brightness
     Hue
