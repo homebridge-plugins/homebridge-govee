@@ -11,6 +11,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat(lights): support LAN-first ptReal scene selector without an OpenAPI key (#1405) (@ethanjnrg)
 - feat(lights): support sceneType 6 in LAN-first ptReal scene selector (#1406) (@ethanjnrg)
 - chore(deps): dependency updates
+- fix(heaters): fix h7131 heater auto mode, fan tile and level slider in home (#1408) (@zmanuel1234)
 
 ## v11.41.0 (2026-11-22)
 
