@@ -1001,6 +1001,14 @@
               "condition": {
                 "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
               }
+            },
+            "sceneSelectorTapToRun": {
+              "title": "Scene Selector: Tap-to-Run",
+              "type": "boolean",
+              "description": "Offer this device's Govee Tap-to-Run scenes (including DIY, DreamView, and music modes) in the scene selector dropdown over LAN/AWS - requires your Govee account login, and can be enabled on its own without preset scenes or a Govee API key.",
+              "condition": {
+                "functionBody": "return (model.lightDevices && model.lightDevices[arrayIndices] && model.lightDevices[arrayIndices].deviceId && model.lightDevices[arrayIndices].deviceId.length === 23 && !['switch'].includes(model.lightDevices[arrayIndices].showAs) && !model.lightDevices[arrayIndices].ignoreDevice);"
+              }
             }
           }
         }
@@ -1631,6 +1639,7 @@
             "lightDevices[].sceneSelector",
             "lightDevices[].sceneSelectorSnapshots",
             "lightDevices[].sceneSelectorDiy",
+            "lightDevices[].sceneSelectorTapToRun",
             {
               "expandable": true,
               "title": "Custom Scenes/Modes",
