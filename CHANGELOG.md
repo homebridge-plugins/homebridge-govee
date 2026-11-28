@@ -10,6 +10,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: detect matter models from govee's matterId and add r707a, h60b2 and h607c (#1404) (@ethanjnrg)
 - feat(lights): support LAN-first ptReal scene selector without an OpenAPI key (#1405) (@ethanjnrg)
 - feat(lights): support sceneType 6 in LAN-first ptReal scene selector (#1406) (@ethanjnrg)
+- fix(heaters): fix h7131 heater auto mode, fan tile and level slider in home (#1408) (@zmanuel1234)
 
 ## v11.41.0 (2026-11-22)
 
@@ -26,11 +27,11 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 ### Changed
 
-- fix(ble): match sensor readings when BlueZ reports upper-case addresses (@floringae)
-- fix(lan): keep scanning for devices when the first scan finds none (@matt-royal)
-- fix(h601c): keep adaptive lighting on in the evening, the light stops at 2700k (@tarun101)
-- fix(lan): refresh known device addresses after rediscovery (@ethanjnrg)
-- fix(lan): revoke stale routes when addresses are reused (@ethanjnrg)
+- fix(ble): match sensor readings when BlueZ reports upper-case addresses (#1378) (@floringae)
+- fix(lan): keep scanning for devices when the first scan finds none (#1374) (@matt-royal)
+- fix(h601c): keep adaptive lighting on in the evening, the light stops at 2700k (#1376) (@tarun101)
+- fix(lan): refresh known device addresses after rediscovery (#1377) (@ethanjnrg)
+- fix(lan): revoke stale routes when addresses are reused (#1377) (@ethanjnrg)
 - fix(scenes): fetch diy scenes from their own list, so the selector shows them (#1375)
 - fix(aws): send a command again when a device that normally answers stays quiet (#1370)
 - feat(outlets): add an option to ask an outlet for its status every minute (#1379)
@@ -54,10 +55,10 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(ble): on a mac, point a bluetooth permission error at the privacy setting, not setcap
 - fix(sockets): show a socket as a heater again, it failed with "not a constructor" (#1388)
 - fix(valves): turn a valve off after its duration when it was on before a restart (#1387)
-- fix(ble): connect to bluetooth-only lights on linux (@ldtnz)
-- fix(http): fetch tap-to-runs with the account token (@StefanRiese)
-- fix(ttr): keep the account topic out of the tap-to-run debug line (@StefanRiese)
-- fix(ttr): read scene codes from govee's preset tap-to-runs (@StefanRiese)
+- fix(ble): connect to bluetooth-only lights on linux (#1390) (@ldtnz)
+- fix(http): fetch tap-to-runs with the account token (#1391) (@StefanRiese)
+- fix(ttr): keep the account topic out of the tap-to-run debug line (#1392) (@StefanRiese)
+- fix(ttr): read scene codes from govee's preset tap-to-runs (#1393) (@StefanRiese)
 - fix: read the h7142's humidity, which showed 0% (#1294)
 - fix(openapi): keep a toggle's state when govee reports it as empty (#1395)
 - feat: show the h7107's room temperature (#1394)
@@ -66,13 +67,13 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix(h7107): ask the fan for its status every minute, so its temperature stays current (#1394)
 - fix: treat the h600c and h6008 bulbs as matter models (#1399) (@R-STR)
 - fix(lights): switch a light off when home sets it to 0% (#1397)
-- feat(h60b2): control each head of the tree lamp as its own light (#1395) (@ethanjnrg)
-- fix(lights): name each zone light in the home app (@ethanjnrg)
-- fix(lights): follow a zone light's saturation, as the main light does (@ethanjnrg)
-- fix(lights): send a zone light's white again after a colour (@ethanjnrg)
-- fix(lights): ask for a zone light's state after a whole-light change (@ethanjnrg)
-- feat(h60b2): set a head's white as kelvin, on its white leds (@ethanjnrg)
-- fix(lights): show a zone light's colour in home when it changes elsewhere (@ethanjnrg)
+- feat(h60b2): control each head of the tree lamp as its own light (#1395) (#1400) (@ethanjnrg)
+- fix(lights): name each zone light in the home app (#1400) (@ethanjnrg)
+- fix(lights): follow a zone light's saturation, as the main light does (#1400) (@ethanjnrg)
+- fix(lights): send a zone light's white again after a colour (#1400) (@ethanjnrg)
+- fix(lights): ask for a zone light's state after a whole-light change (#1400) (@ethanjnrg)
+- feat(h60b2): set a head's white as kelvin, on its white leds (#1400) (@ethanjnrg)
+- fix(lights): show a zone light's colour in home when it changes elsewhere (#1400) (@ethanjnrg)
 - feat(lights): switch a sync box's hdmi input from home, when govee's api lists it (#1289)
 - ci: publish releases with node.js v26, the current lts
 - chore(deps): dependency updates
@@ -122,7 +123,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: take a ceiling fan's speed count from the fan itself, rather than from its model (#1352)
 - fix: send the H1310 and R1310 brightness on the scale they accept, so the light stops landing at a third (#1352)
 - fix: stop reporting success for a command sent on a connection the device does not have enabled
-- feat: give the H1310 and R1310 a separate tile for each of their two lights (#1352) (@ekalp)
+- feat: give the H1310 and R1310 a separate tile for each of their two lights (#1352) (#1353) (@ekalp)
 - fix: keep a speed scale for a ceiling fan model that is not in the table
 - fix: only give the H1310 and R1310 two light tiles when each has a switch of its own to send (#1352)
 - fix: lead a thermo sensor's tile with its temperature, not its humidity, when shown as a thermostat (#1354)
@@ -247,7 +248,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - feat: recognise eleven more meat thermometers, which report what they send so their readings can be worked out, and stop the one already known printing its whole update as a warning
 - feat: add the H5161 power strip and give the H7184 kitchen composter an on and off switch
 - feat: recognise three more sensors, which report what they send, and say plainly in the log why a sensor has no tile yet
-- feat: add ble encryption for the H3001 solar string lights, which silently ignore unencrypted frames (#1328) (@dominick-han)
+- feat: add ble encryption for the H3001 solar string lights, which silently ignore unencrypted frames (#1328) (#1335) (@dominick-han)
 - fix: mention an unrecognised bluetooth broadcast once, and only for one of your own sensors, since a scan also hears your lights and the neighbours
 - fix: say "device(s)" in the connection summary, since the count is often one
 - fix: stop the macOS bluetooth scan leaving its timer running once the device has been found
@@ -276,7 +277,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - chore: declare the supports-hap transport keyword for the homebridge ui
 - feat: add support for the H60B3 uplighter as an rgb light (#1325)
 - feat: add support for the H5901 water timer through the govee openapi (#1324)
-- fix(fans): map rotation speed as a percentage on every fan model, so homekit stops showing speeds like 7% and the top of the slider means full power (#1326) (@cwhett)
+- fix(fans): map rotation speed as a percentage on every fan model, so homekit stops showing speeds like 7% and the top of the slider means full power (#1326) (#1327) (@cwhett)
 - chore: log what each device can do according to the govee openapi, in debug mode, to make working out new device support quicker
 - chore: decode the status codes a device reports into readable hex in debug mode, so support for new device features can be worked out from a normal log
 - feat: add the H5089 night light as a homekit light tile with on, off and brightness (#1323)
@@ -285,9 +286,9 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 - fix: stop sending a per-outlet value to the govee api, which rejected every press with a parameter out of range error on two-outlet plugs (#1323)
 - fix: hide the H5089 night light tile until its commands are worked out, rather than showing a control that does nothing (#1323)
 - feat: add support for the H3001 solar string lights as an rgb light (#1328)
-- fix(fans): rebuild the fan service once when it was cached under the old speed scale, so the top of the slider stops setting the slowest speed (#1326) (@cwhett)
+- fix(fans): rebuild the fan service once when it was cached under the old speed scale, so the top of the slider stops setting the slowest speed (#1326) (#1327) (@cwhett)
 - fix: show the H5089 night light tile again, but refuse control commands, so it reports the real state instead of quietly ignoring taps (#1323)
-- fix(ice-makers): stop the home app showing an ice size of 0 when one has never been set (#1329) (@cwhett)
+- fix(ice-makers): stop the home app showing an ice size of 0 when one has never been set (#1329) (#1330) (@cwhett)
 - chore: add a test setup with tests for the shared helper functions
 - chore(github): run the build and tests in ci, on node 22, 24 and 26
 - chore: use the same lint setup across every plugin
@@ -414,7 +415,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 
 ### Changes
 
-- feat: add support for Lantern Floor Lamp H1630 (@alexjsp)
+- feat: add support for Lantern Floor Lamp H1630 (#1284) (@alexjsp)
 - feat: add support for various new models
 - fix: ignore undefined battery values to stop characteristic warnings (#1266)
 - fix: guard against NaN temperature values to stop characteristic warnings (#1291)
@@ -964,7 +965,7 @@ All notable changes to `@homebridge-plugins/homebridge-govee` will be documented
 ### Added
 
 - Support for `H606A`, `H6092` and `H706C` lights
-- Add LAN support for `H7066` (@JGtHb)
+- Add LAN support for `H7066` (#655) (@JGtHb)
 
 ### Changed
 
